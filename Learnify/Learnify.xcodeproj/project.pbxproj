@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281B5F1A2BACBF5200378947 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 281B5F192BACBF5200378947 /* Lottie */; };
 		CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F32BAB61D300575962 /* AppDelegate.swift */; };
 		CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F52BAB61D300575962 /* SceneDelegate.swift */; };
 		CEA634F82BAB61D300575962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F72BAB61D300575962 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */,
+				281B5F1A2BACBF5200378947 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 			name = Learnify;
 			packageProductDependencies = (
 				CEA6350A2BAB69B000575962 /* SnapKit */,
+				281B5F192BACBF5200378947 /* Lottie */,
 			);
 			productName = Learnify;
 			productReference = CEA634F02BAB61D300575962 /* Learnify.app */;
@@ -124,6 +127,7 @@
 			mainGroup = CEA634E72BAB61D300575962;
 			packageReferences = (
 				CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				281B5F182BACBF5200378947 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = CEA634F12BAB61D300575962 /* Products */;
 			projectDirPath = "";
@@ -312,6 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Learnify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -338,6 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Learnify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -381,6 +387,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		281B5F182BACBF5200378947 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 		CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -392,6 +406,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		281B5F192BACBF5200378947 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 281B5F182BACBF5200378947 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		CEA6350A2BAB69B000575962 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */;
