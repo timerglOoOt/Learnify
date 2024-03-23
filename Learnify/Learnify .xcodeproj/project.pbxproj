@@ -15,6 +15,9 @@
 		CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA6350A2BAB69B000575962 /* SnapKit */; };
 		DEF357132BAB759500FD27EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DEF357122BAB759500FD27EC /* Swinject */; };
 		DEF357152BAB759500FD27EC /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DEF357142BAB759500FD27EC /* Swinject-Dynamic */; };
+		DEF357222BAF5C9700FD27EC /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF357212BAF5C9700FD27EC /* LoginScreenView.swift */; };
+		DEF357242BAF5CB100FD27EC /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF357232BAF5CB100FD27EC /* LoginScreenViewController.swift */; };
+		DEF357262BAF5E0200FD27EC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF357252BAF5E0200FD27EC /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		CEA634FC2BAB61D300575962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA634FF2BAB61D300575962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA635012BAB61D300575962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEF357212BAF5C9700FD27EC /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		DEF357232BAF5CB100FD27EC /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		DEF357252BAF5E0200FD27EC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
+				DEF357282BAF843B00FD27EC /* Model */,
+				DEF357272BAF841C00FD27EC /* UserService */,
+				DEF357202BAF5C7800FD27EC /* LoginScreen */,
 				CEA635072BAB622800575962 /* AppLife */,
 				CEA634F72BAB61D300575962 /* ViewController.swift */,
 				CEA634FC2BAB61D300575962 /* Assets.xcassets */,
@@ -76,6 +85,30 @@
 				CEA634F52BAB61D300575962 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
+			sourceTree = "<group>";
+		};
+		DEF357202BAF5C7800FD27EC /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DEF357212BAF5C9700FD27EC /* LoginScreenView.swift */,
+				DEF357232BAF5CB100FD27EC /* LoginScreenViewController.swift */,
+				DEF357252BAF5E0200FD27EC /* LoginModel.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		DEF357272BAF841C00FD27EC /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		DEF357282BAF843B00FD27EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF357222BAF5C9700FD27EC /* LoginScreenView.swift in Sources */,
+				DEF357262BAF5E0200FD27EC /* LoginModel.swift in Sources */,
 				CEA634F82BAB61D300575962 /* ViewController.swift in Sources */,
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,
+				DEF357242BAF5CB100FD27EC /* LoginScreenViewController.swift in Sources */,
 				CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
