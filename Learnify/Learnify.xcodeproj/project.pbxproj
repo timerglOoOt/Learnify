@@ -11,6 +11,11 @@
 		CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */; };
 		CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73716F2BAFFB4000EFD0D1 /* StartView.swift */; };
 		CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371712BB00CE300EFD0D1 /* UIColor.swift */; };
+		CE7371782BB05DD700EFD0D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371772BB05DD700EFD0D1 /* MainViewController.swift */; };
+		CE73717A2BB05DE500EFD0D1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371792BB05DE500EFD0D1 /* MainView.swift */; };
+		CE73717C2BB05DF800EFD0D1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73717B2BB05DF800EFD0D1 /* MainTableViewCell.swift */; };
+		CE73717F2BB0648700EFD0D1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73717E2BB0648700EFD0D1 /* Book.swift */; };
+		CE7371812BB0746C00EFD0D1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371802BB0746C00EFD0D1 /* MainViewModel.swift */; };
 		CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F32BAB61D300575962 /* AppDelegate.swift */; };
 		CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F52BAB61D300575962 /* SceneDelegate.swift */; };
 		CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F72BAB61D300575962 /* StartViewController.swift */; };
@@ -31,6 +36,11 @@
 		CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CE73716F2BAFFB4000EFD0D1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CE7371712BB00CE300EFD0D1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		CE7371772BB05DD700EFD0D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CE7371792BB05DE500EFD0D1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE73717B2BB05DF800EFD0D1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		CE73717E2BB0648700EFD0D1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CE7371802BB0746C00EFD0D1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CEA634F02BAB61D300575962 /* Learnify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA634F32BAB61D300575962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA634F52BAB61D300575962 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +89,33 @@
 			path = "Start screen";
 			sourceTree = "<group>";
 		};
+		CE7371752BB05DA700EFD0D1 /* Main screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE7371762BB05DC600EFD0D1 /* Views */,
+				CE7371802BB0746C00EFD0D1 /* MainViewModel.swift */,
+			);
+			path = "Main screen";
+			sourceTree = "<group>";
+		};
+		CE7371762BB05DC600EFD0D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7371772BB05DD700EFD0D1 /* MainViewController.swift */,
+				CE7371792BB05DE500EFD0D1 /* MainView.swift */,
+				CE73717B2BB05DF800EFD0D1 /* MainTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE73717D2BB0647B00EFD0D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE73717E2BB0648700EFD0D1 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEA634E72BAB61D300575962 = {
 			isa = PBXGroup;
 			children = (
@@ -98,13 +135,16 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
-				DE699DD42BB0D2F00007CA72 /* Cordinator */,
+				CE73717D2BB0647B00EFD0D1 /* Models */,
 				DE699DD12BB0AE680007CA72 /* HomeScreen */,
 				DE699DCC2BB087A80007CA72 /* Model */,
+				DE699DD42BB0D2F00007CA72 /* Cordinator */,
 				DE699DC52BB06DE10007CA72 /* LoginScreen */,
 				CE73716E2BAFF9E300EFD0D1 /* Start screen */,
 				CE7371682BAF6D1800EFD0D1 /* Extensions */,
 				CEA635072BAB622800575962 /* AppLife */,
+				CE73716E2BAFF9E300EFD0D1 /* Start screen */,
+				CE7371752BB05DA700EFD0D1 /* Main screen */,
 				CEA634FC2BAB61D300575962 /* Assets.xcassets */,
 				CEA634FE2BAB61D300575962 /* LaunchScreen.storyboard */,
 				CEA635012BAB61D300575962 /* Info.plist */,
@@ -257,6 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7371782BB05DD700EFD0D1 /* MainViewController.swift in Sources */,
+				CE73717C2BB05DF800EFD0D1 /* MainTableViewCell.swift in Sources */,
+				CE73717A2BB05DE500EFD0D1 /* MainView.swift in Sources */,
 				CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */,
 				DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */,
 				CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */,
@@ -267,8 +310,9 @@
 				DE699DD02BB099440007CA72 /* Coordinator.swift in Sources */,
 				CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */,
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,
-				DE699DCE2BB087C00007CA72 /* User.swift in Sources */,
+				CE73717F2BB0648700EFD0D1 /* Book.swift in Sources */,
 				CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */,
+				CE7371812BB0746C00EFD0D1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
