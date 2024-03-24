@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Хайруллин Тимур
+
 class Dynamic<T> {
     typealias Listener = (T) -> Void
     private var listener: Listener?
@@ -10,8 +12,8 @@ class Dynamic<T> {
         }
     }
 
-    init(_ v: T) {
-        value = v
+    init(_ val: T) {
+        value = val
     }
 
     func bind(_ listener: Listener?) {
