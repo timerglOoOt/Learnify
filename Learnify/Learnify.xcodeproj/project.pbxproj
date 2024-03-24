@@ -17,6 +17,14 @@
 		CEA634FD2BAB61D300575962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FC2BAB61D300575962 /* Assets.xcassets */; };
 		CEA635002BAB61D300575962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FE2BAB61D300575962 /* LaunchScreen.storyboard */; };
 		CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA6350A2BAB69B000575962 /* SnapKit */; };
+		DE699DC22BB06DDA0007CA72 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = DE699DC12BB06DDA0007CA72 /* Swinject */; };
+		DE699DC42BB06DDA0007CA72 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DE699DC32BB06DDA0007CA72 /* Swinject-Dynamic */; };
+		DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC62BB06DF20007CA72 /* LoginView.swift */; };
+		DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC82BB06E040007CA72 /* LoginViewController.swift */; };
+		DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCA2BB06E120007CA72 /* LoginModel.swift */; };
+		DE699DCE2BB087C00007CA72 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCD2BB087C00007CA72 /* User.swift */; };
+		DE699DD02BB099440007CA72 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCF2BB099440007CA72 /* Coordinator.swift */; };
+		DE699DD32BB0AE800007CA72 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DD22BB0AE800007CA72 /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,12 @@
 		CEA634FC2BAB61D300575962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA634FF2BAB61D300575962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA635012BAB61D300575962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE699DC62BB06DF20007CA72 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DE699DC82BB06E040007CA72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE699DCA2BB06E120007CA72 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		DE699DCD2BB087C00007CA72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DE699DCF2BB099440007CA72 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DE699DD22BB0AE800007CA72 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +52,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */,
+				DE699DC42BB06DDA0007CA72 /* Swinject-Dynamic in Frameworks */,
 				281B5F1D2BACC59D00378947 /* Lottie in Frameworks */,
+				DE699DC22BB06DDA0007CA72 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +66,7 @@
 			children = (
 				CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */,
 				CE7371712BB00CE300EFD0D1 /* UIColor.swift */,
+				DE699DCF2BB099440007CA72 /* Coordinator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -82,6 +99,9 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
+				DE699DD12BB0AE680007CA72 /* HomeScreen */,
+				DE699DCC2BB087A80007CA72 /* Model */,
+				DE699DC52BB06DE10007CA72 /* LoginScreen */,
 				CE73716E2BAFF9E300EFD0D1 /* Start screen */,
 				CE7371682BAF6D1800EFD0D1 /* Extensions */,
 				CEA635072BAB622800575962 /* AppLife */,
@@ -99,6 +119,32 @@
 				CEA634F52BAB61D300575962 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
+			sourceTree = "<group>";
+		};
+		DE699DC52BB06DE10007CA72 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DE699DC62BB06DF20007CA72 /* LoginView.swift */,
+				DE699DC82BB06E040007CA72 /* LoginViewController.swift */,
+				DE699DCA2BB06E120007CA72 /* LoginModel.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		DE699DCC2BB087A80007CA72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE699DCD2BB087C00007CA72 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE699DD12BB0AE680007CA72 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DE699DD22BB0AE800007CA72 /* HomeScreenViewController.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +167,8 @@
 			packageProductDependencies = (
 				CEA6350A2BAB69B000575962 /* SnapKit */,
 				281B5F1C2BACC59D00378947 /* Lottie */,
+				DE699DC12BB06DDA0007CA72 /* Swinject */,
+				DE699DC32BB06DDA0007CA72 /* Swinject-Dynamic */,
 			);
 			productName = Learnify;
 			productReference = CEA634F02BAB61D300575962 /* Learnify.app */;
@@ -153,6 +201,7 @@
 			packageReferences = (
 				CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				281B5F1B2BACC59D00378947 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				DE699DC02BB06DDA0007CA72 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = CEA634F12BAB61D300575962 /* Products */;
 			projectDirPath = "";
@@ -201,10 +250,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */,
+				DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */,
 				CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */,
 				CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */,
+				DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */,
+				DE699DD32BB0AE800007CA72 /* HomeScreenViewController.swift in Sources */,
+				DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */,
+				DE699DD02BB099440007CA72 /* Coordinator.swift in Sources */,
 				CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */,
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,
+				DE699DCE2BB087C00007CA72 /* User.swift in Sources */,
 				CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +484,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		DE699DC02BB06DDA0007CA72 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +504,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DE699DC12BB06DDA0007CA72 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE699DC02BB06DDA0007CA72 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		DE699DC32BB06DDA0007CA72 /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE699DC02BB06DDA0007CA72 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
