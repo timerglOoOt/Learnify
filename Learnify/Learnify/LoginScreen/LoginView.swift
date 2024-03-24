@@ -101,7 +101,7 @@ class LoginView: UIView {
         passwordTextfield.placeholder = "Password"
         passwordTextfield.backgroundColor = .systemGray6
         passwordTextfield.borderStyle = .roundedRect
-        passwordTextfield.autocapitalizationType = .none
+        passwordTextfield.textContentType = .password
         passwordTextfield.textColor = UIColor(named: "SubtitleColor")
         passwordTextfield.snp.makeConstraints { make in
             make.top.equalTo(password.snp.bottom).offset(5)

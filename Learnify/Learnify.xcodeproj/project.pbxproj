@@ -66,7 +66,6 @@
 			children = (
 				CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */,
 				CE7371712BB00CE300EFD0D1 /* UIColor.swift */,
-				DE699DCF2BB099440007CA72 /* Coordinator.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -99,6 +98,7 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
+				DE699DD42BB0D2F00007CA72 /* Cordinator */,
 				DE699DD12BB0AE680007CA72 /* HomeScreen */,
 				DE699DCC2BB087A80007CA72 /* Model */,
 				DE699DC52BB06DE10007CA72 /* LoginScreen */,
@@ -145,6 +145,14 @@
 				DE699DD22BB0AE800007CA72 /* HomeScreenViewController.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		DE699DD42BB0D2F00007CA72 /* Cordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE699DCF2BB099440007CA72 /* Coordinator.swift */,
+			);
+			path = Cordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
