@@ -1,10 +1,10 @@
 import Foundation
 
 // MARK: - Хайруллин Тимур
-struct Book: Codable {
+struct Book: Decodable {
     let imageName: String?
-    let name: String?
-    let author: String?
+    let title: String
+    let authors: [String]?
     let description: String?
     let isSaved: Bool?
 }

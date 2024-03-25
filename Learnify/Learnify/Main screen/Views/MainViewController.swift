@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
 
         mainView.setupDataSource(with: self)
         mainView.setupDelegate(with: self)
+        viewModel.getBooksByRequest(requestString: "harry+potter")
     }
 
     init(viewModel: MainViewModel) {
@@ -28,7 +29,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        viewModel.numberOfRowsInSection()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
