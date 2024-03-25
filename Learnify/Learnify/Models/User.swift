@@ -14,4 +14,8 @@ struct User {
     let surname: String
     let email: String
     let password: String
+    var commentCount: Int
+    var bookCount: Int
+    var info: String?
+
 }
