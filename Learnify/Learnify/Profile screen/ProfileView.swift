@@ -151,7 +151,6 @@ class ProfileView: UIView {
         infoTitleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         infoTitleLabel.textColor = .gray
 //        infoTitleLabel.textColor = UIColor.hexStringToUIColor(hex: "323390")
-        
         addSubview(infoTitleLabel)
 
         infoTitleLabel.snp.makeConstraints { make in

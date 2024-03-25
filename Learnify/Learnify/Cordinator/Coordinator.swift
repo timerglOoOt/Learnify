@@ -27,8 +27,10 @@ class Coordinator: LoginCoordinator {
         navigationController.pushViewController(loginViewController, animated: true)
     }
 
+    // MARK: - Хайруллин Тимур
     func goToHomePage() {
-        let homeViewController = HomeScreenViewController()
-        navigationController.pushViewController(homeViewController, animated: true)
+        let mainViewModel = MainViewModel()
+        let mainViewController = MainViewController(viewModel: mainViewModel)
+        navigationController.pushViewController(mainViewController, animated: true)
     }
 }

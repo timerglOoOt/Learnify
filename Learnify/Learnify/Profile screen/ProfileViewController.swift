@@ -36,11 +36,12 @@ class ProfileViewController: UIViewController {
 
     func userData() {
         viewModel.obtainCurrentUser { user in
-            self.delegate?.dataUpdater(firstname: user.firstname,
-                                       surname: user.surname,
-                                       commentCount: user.commentCount,
-                                       bookCount: user.bookCount,
-                                       info: user.info ?? "Write something...")
+            self.delegate?.dataUpdater(
+                firstname: user.firstname,
+                surname: user.surname,
+                commentCount: user.commentCount,
+                bookCount: user.bookCount,
+                info: user.info ?? "Write something...")
         }
     }
 }

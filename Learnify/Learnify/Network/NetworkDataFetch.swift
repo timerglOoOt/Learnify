@@ -16,7 +16,7 @@ class NetworkDataFetch {
                 } catch let jsonError {
                     print("Failed to decode JSON", jsonError)
                 }
-            case .failure(_ ):
+            case .failure(_):
                 response(nil, .canNotParseData)
             }
         }
