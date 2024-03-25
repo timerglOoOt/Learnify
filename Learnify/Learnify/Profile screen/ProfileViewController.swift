@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Хасаншина Язгуль
+
 protocol ProfileViewModelDataSetterDelegate: AnyObject {
     func dataUpdater(firstname: String, surname: String, commentCount: Int, bookCount: Int, info: String)
 }

@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 
+// MARK: - Хасаншина Язгуль
+
 class ProfileViewModel {
 
     private var user = User(

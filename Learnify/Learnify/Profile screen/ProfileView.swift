@@ -1,6 +1,8 @@
 import UIKit
 import SnapKit
 
+// MARK: - Хасаншина Язгуль
+
 class ProfileView: UIView {
 
     lazy var firstnameLabel: UILabel = UILabel()
