@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		281B5F1D2BACC59D00378947 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 281B5F1C2BACC59D00378947 /* Lottie */; };
+		28EA62262BB0B9AC003FBA16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */; };
+		28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62272BB0B9DD003FBA16 /* ProfileView.swift */; };
+		28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */; };
+		28EA622C2BB0BEF3003FBA16 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA622B2BB0BEF3003FBA16 /* User.swift */; };
 		CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */; };
 		CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73716F2BAFFB4000EFD0D1 /* StartView.swift */; };
 		CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371712BB00CE300EFD0D1 /* UIColor.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		28EA62272BB0B9DD003FBA16 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		28EA622B2BB0BEF3003FBA16 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CE73716F2BAFFB4000EFD0D1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CE7371712BB00CE300EFD0D1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -45,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28EA62222BB0B928003FBA16 /* Profile screen */ = {
+			isa = PBXGroup;
+			children = (
+				28EA62232BB0B93C003FBA16 /* Model */,
+				28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */,
+				28EA62272BB0B9DD003FBA16 /* ProfileView.swift */,
+				28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */,
+			);
+			path = "Profile screen";
+			sourceTree = "<group>";
+		};
+		28EA62232BB0B93C003FBA16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28EA622B2BB0BEF3003FBA16 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CE7371682BAF6D1800EFD0D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +109,7 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
+				28EA62222BB0B928003FBA16 /* Profile screen */,
 				CE73716E2BAFF9E300EFD0D1 /* Start screen */,
 				CE7371682BAF6D1800EFD0D1 /* Extensions */,
 				CEA635072BAB622800575962 /* AppLife */,
@@ -200,10 +228,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */,
+				28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */,
 				CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */,
 				CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */,
+				28EA622C2BB0BEF3003FBA16 /* User.swift in Sources */,
 				CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */,
 				CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */,
+				28EA62262BB0B9AC003FBA16 /* ProfileViewController.swift in Sources */,
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,
 				CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */,
 			);
