@@ -3,12 +3,15 @@ import UIKit
 
 // MARK: - Хайруллин Тимур
 class MainViewModel {
-    private let books = [
-        Book(imageName: "book1", title: "The Midnight Library", authors: ["Matt Haig"], description: "rfgyrfgyryfdvfvfvfvfvfvfvfvfffryfrifyvrv", isSaved: true),
-        Book(imageName: "book2", title: "Find a sponsor", authors: ["Sylvia Ann Hewlett"], description: nil, isSaved: nil),
-        Book(imageName: "book3", title: "I want a Better Catastrophe", authors: ["Andrew Boyd"], description: nil, isSaved: nil)
-    ]
+    private let bookBuilder = BookBuilder()
+    private var books: [Book] = []
 
+    init() {
+        setupMockData()
+    }
+}
+
+extension MainViewModel {
     func numberOfRowsInSection() -> Int {
         books.count
     }
@@ -29,5 +32,27 @@ class MainViewModel {
                 print(books.count)
             }
         }
+    }
+
+    private func setupMockData() {
+        books = [
+            bookBuilder
+                .addImageName(imageName: "book1")
+                .addTitle(title: "The Midnight Library")
+                .addDescription(description: "rfgyrfgyryfdvfvfvfvfvfvfvfvfffryfrifyvrv")
+                .addAuthors(authors: ["Matt Haig"])
+                .addIsSaved(isSaved: true)
+                .build(),
+            bookBuilder
+                .addImageName(imageName: "book2")
+                .addTitle(title: "Find a sponsor")
+                .addAuthors(authors: ["Sylvia Ann Hewlett"])
+                .build(),
+            bookBuilder
+                .addImageName(imageName: "book3")
+                .addTitle(title: "I want a Better Catastrophe")
+                .addAuthors(authors: ["Andrew Boyd"])
+                .build()
+        ]
     }
 }

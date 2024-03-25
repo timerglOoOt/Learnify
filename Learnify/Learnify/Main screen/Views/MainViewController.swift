@@ -14,7 +14,9 @@ class MainViewController: UIViewController {
 
         mainView.setupDataSource(with: self)
         mainView.setupDelegate(with: self)
-        viewModel.getBooksByRequest(requestString: "harry+potter")
+
+        // FIXME: разобраться с сетевым запросом
+//        viewModel.getBooksByRequest(requestString: "harry+potter")
     }
 
     init(viewModel: MainViewModel) {

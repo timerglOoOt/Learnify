@@ -21,6 +21,7 @@
 		CE7371882BB13FC100EFD0D1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371872BB13FC100EFD0D1 /* NetworkError.swift */; };
 		CE73718A2BB1400600EFD0D1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371892BB1400600EFD0D1 /* NetworkRequest.swift */; };
 		CE73718C2BB1430E00EFD0D1 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718B2BB1430E00EFD0D1 /* NetworkDataFetch.swift */; };
+		CE73718E2BB14CF700EFD0D1 /* BookBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718D2BB14CF700EFD0D1 /* BookBuilder.swift */; };
 		CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F32BAB61D300575962 /* AppDelegate.swift */; };
 		CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F52BAB61D300575962 /* SceneDelegate.swift */; };
 		CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F72BAB61D300575962 /* StartViewController.swift */; };
@@ -51,6 +52,7 @@
 		CE7371872BB13FC100EFD0D1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CE7371892BB1400600EFD0D1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		CE73718B2BB1430E00EFD0D1 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		CE73718D2BB14CF700EFD0D1 /* BookBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBuilder.swift; sourceTree = "<group>"; };
 		CEA634F02BAB61D300575962 /* Learnify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA634F32BAB61D300575962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA634F52BAB61D300575962 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CE73717E2BB0648700EFD0D1 /* Book.swift */,
+				CE73718D2BB14CF700EFD0D1 /* BookBuilder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */,
 				CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */,
 				CE7371842BB13A9800EFD0D1 /* EndPoint.swift in Sources */,
+				CE73718E2BB14CF700EFD0D1 /* BookBuilder.swift in Sources */,
 				DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */,
 				DE699DD32BB0AE800007CA72 /* HomeScreenViewController.swift in Sources */,
 				DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */,
