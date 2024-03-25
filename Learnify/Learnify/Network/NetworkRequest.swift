@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - Хайруллин Тимур
 class NetworkRequest {
     static let shared = NetworkRequest()
 

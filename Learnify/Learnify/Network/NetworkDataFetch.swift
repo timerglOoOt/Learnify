@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - Хайруллин Тимур
 class NetworkDataFetch {
     static let shared = NetworkDataFetch()
 

@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - Хайруллин Тимур
 extension URLSession {
     typealias Handler = (Data?, URLResponse?, Error?) -> Void
 

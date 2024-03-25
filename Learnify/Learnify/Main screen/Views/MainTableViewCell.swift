@@ -71,8 +71,7 @@ extension MainTableViewCell {
     func configure(with book: Book) {
         bookImageView.image = UIImage(named: book.imageName ?? "")
         bookNameLabel.text = book.title
-        // TODO: сделать переход в строку
-//        bookAuthorLabel.text = book.authors
+        bookAuthorLabel.text = book.authors?.arrayToString()
         bookDescriptionLabel.text = book.description
         bookmarkImageView.image = UIImage(systemName: ((book.isSaved ?? false) ? "bookmark.fill" : "bookmark"))
     }
