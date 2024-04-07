@@ -3,6 +3,10 @@ import SnapKit
 
 // MARK: - Хасаншина Язгуль
 
+enum AccessibilityIdentifiers {
+    static let infoTitleLabel = "info_title_label"
+    static let infoLabel = "info_label"
+}
 class ProfileView: UIView {
 
     lazy var firstnameLabel: UILabel = UILabel()
@@ -158,6 +162,8 @@ class ProfileView: UIView {
             make.leading.equalToSuperview().offset(30)
             make.height.equalTo(20)
         }
+
+        infoTitleLabel.accessibilityIdentifier = AccessibilityIdentifiers.infoTitleLabel
     }
     private func setupInfoLabel() {
         infoLabel.font = UIFont.systemFont(ofSize: 14)
@@ -173,6 +179,8 @@ class ProfileView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-30)
         }
+
+        infoLabel.accessibilityIdentifier = AccessibilityIdentifiers.infoLabel
     }
 
 }
