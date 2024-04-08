@@ -1,27 +1,69 @@
 import XCTest
+@testable import Learnify
+
+// MARK: Faki Doosuur Doris
 
 final class LoginScreenLearnifyTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    private let user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, bookCount: 3, info: "I am a student of ITIS")
+    let viewModel = LoginModel()
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func test_User_Login_Sucess() {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+        let testUser = user
+        let expectation = XCTestExpectation(description: "User login sucess")
+
+        viewModel.userValidationResult.bind { result in
+            switch result {
+            case .success(let user):
+                XCTAssertEqual(user, testUser, "user should be successfully logged in")
+                expectation.fulfill()
+            default:
+                break
+            }
         }
+        viewModel.login(user.email, password: user.password)
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func test_User_Login_Failed() {
+        let incorrectEmail = "Doosuur"
+        let incorrectPassword = "Doosuur"
+
+        let expectation = XCTestExpectation(description: "User login failure")
+
+        viewModel.userValidationResult.bind { result in
+            switch result {
+            case .failure(let error as UserValidationError):
+                XCTAssertEqual(error, UserValidationError.incorrectCredentials, "Login process should fail with incorrect email and password")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+        viewModel.login(incorrectEmail, password: incorrectPassword)
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func test_Login_Failed_EmptyEmailAndPassword() {
+
+        let emptyEmail: String? = ""
+        let emptyPassword: String? = ""
+
+        let expectation = XCTestExpectation(description: "User login failure")
+
+        viewModel.userValidationResult.bind { result in
+            switch result {
+            case .failure(let error as UserValidationError):
+                XCTAssertEqual(error, UserValidationError.incorrectCredentials, "Login should fail with empty textfields")
+                expectation.fulfill()
+            default:
+                break
+            }
+        }
+
+        viewModel.login(emptyEmail, password: emptyPassword)
+        wait(for: [expectation], timeout: 5)
     }
 }

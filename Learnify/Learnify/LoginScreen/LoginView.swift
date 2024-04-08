@@ -12,6 +12,10 @@ import UIKit
 protocol LoginViewDelegate: AnyObject {
     func didPressLogin()
 }
+enum AccessibilityIdentifiers {
+    static let emailTextField = "email"
+    static let passwordTextField = "password"
+}
 
 class LoginView: UIView {
 
@@ -31,11 +35,12 @@ class LoginView: UIView {
         setUpFunctions()
     }
 
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setUpFunctions() {
+    func setUpFunctions() {
         setupLogo()
         setupEmailLabel()
         setupEmail()
@@ -73,6 +78,7 @@ class LoginView: UIView {
     private func setupEmail() {
         addSubview(emailTextfield)
         emailTextfield.placeholder = "Email"
+        emailTextfield.accessibilityIdentifier = AccessibilityIdentifiers.emailTextField
         emailTextfield.backgroundColor = .systemGray6
         emailTextfield.borderStyle = .roundedRect
         emailTextfield.autocapitalizationType = .none
@@ -93,12 +99,14 @@ class LoginView: UIView {
         password.snp.makeConstraints { make in
             make.top.equalTo(emailTextfield.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(16)
-        }
     }
+}
 
     private func setupPassword() {
         addSubview(passwordTextfield)
         passwordTextfield.placeholder = "Password"
+        passwordTextfield.accessibilityIdentifier = AccessibilityIdentifiers.passwordTextField
+        passwordTextfield.isHidden = false
         passwordTextfield.backgroundColor = .systemGray6
         passwordTextfield.borderStyle = .roundedRect
         passwordTextfield.textContentType = .password
