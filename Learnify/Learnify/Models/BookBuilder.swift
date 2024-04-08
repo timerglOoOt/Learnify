@@ -1,8 +1,9 @@
 import Foundation
+import UIKit
 
 // MARK: - Хайруллин Тимур (паттерн Builder)
 class BookBuilder {
-    private var imageName: String?
+    private var bookImage: UIImage?
     private var title: String?
     private var authors: [String]?
     private var publishedDate: String?
@@ -15,8 +16,8 @@ class BookBuilder {
     private var ratingsCount: Int?
     private var isSaved: Bool?
 
-    func addImageName(imageName: String) -> Self {
-        self.imageName = imageName
+    func addImage(bookImage: UIImage) -> Self {
+        self.bookImage = bookImage
         return self
     }
 
@@ -79,7 +80,7 @@ class BookBuilder {
 extension BookBuilder {
     func build() -> Book {
     let book = Book(
-        imageName: imageName,
+        bookImage: bookImage,
         title: title ?? "",
         authors: authors,
         publishedDate: publishedDate,
@@ -98,7 +99,7 @@ extension BookBuilder {
     }
 
     func clearBuild() {
-        imageName = nil
+        bookImage = nil
         title = nil
         authors = nil
         publishedDate = nil

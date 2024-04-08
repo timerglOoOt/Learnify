@@ -13,7 +13,7 @@ class MainTableViewCell: UITableViewCell {
 
     private lazy var bookNameLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = .zero
+        label.numberOfLines = 2
         label.font = .systemFont(ofSize: 18, weight: .medium)
         label.textColor = .black
         label.textAlignment = .left
@@ -69,7 +69,7 @@ class MainTableViewCell: UITableViewCell {
 
 extension MainTableViewCell {
     func configure(with book: Book) {
-        bookImageView.image = UIImage(named: book.imageName ?? "")
+        bookImageView.image = book.bookImage
         bookNameLabel.text = book.title
         bookAuthorLabel.text = book.authors?.arrayToString()
         bookDescriptionLabel.text = book.description

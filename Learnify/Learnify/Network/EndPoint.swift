@@ -6,15 +6,13 @@ struct EndPoint {
 }
 
 extension EndPoint {
-    var url: URL {
+    var url: URL? {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "www.googleapis.com"
-        components.path = "/books/v1/volumes?q=" + path + "/items"
+        components.path = "/books/v1/volumes"
+        components.queryItems = [URLQueryItem(name: "q", value: path), URLQueryItem(name: "maxResults", value: "10")]
 
-        guard let url = components.url else {
-            preconditionFailure("Invalid URL components: \(components)")
-        }
-        return url
+        return components.url
     }
 }

@@ -22,8 +22,6 @@
 		CE7371842BB13A9800EFD0D1 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371832BB13A9800EFD0D1 /* EndPoint.swift */; };
 		CE7371862BB13E9800EFD0D1 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371852BB13E9800EFD0D1 /* URLSession.swift */; };
 		CE7371882BB13FC100EFD0D1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371872BB13FC100EFD0D1 /* NetworkError.swift */; };
-		CE73718A2BB1400600EFD0D1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371892BB1400600EFD0D1 /* NetworkRequest.swift */; };
-		CE73718C2BB1430E00EFD0D1 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718B2BB1430E00EFD0D1 /* NetworkDataFetch.swift */; };
 		CE73718E2BB14CF700EFD0D1 /* BookBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718D2BB14CF700EFD0D1 /* BookBuilder.swift */; };
 		CE7371902BB1585700EFD0D1 /* ArrayToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718F2BB1585700EFD0D1 /* ArrayToString.swift */; };
 		CE7371912BB17EEC00EFD0D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCD2BB087C00007CA72 /* User.swift */; };
@@ -34,6 +32,9 @@
 		CEA634FD2BAB61D300575962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FC2BAB61D300575962 /* Assets.xcassets */; };
 		CEA635002BAB61D300575962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FE2BAB61D300575962 /* LaunchScreen.storyboard */; };
 		CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA6350A2BAB69B000575962 /* SnapKit */; };
+		CEB5F0062BC1598200A94B47 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0052BC1598200A94B47 /* NetworkService.swift */; };
+		CEB5F0082BC15C2C00A94B47 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */; };
+		CEB5F00A2BC15D9300A94B47 /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0092BC15D9300A94B47 /* BookParser.swift */; };
 		DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC62BB06DF20007CA72 /* LoginView.swift */; };
 		DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC82BB06E040007CA72 /* LoginViewController.swift */; };
 		DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCA2BB06E120007CA72 /* LoginModel.swift */; };
@@ -55,8 +56,6 @@
 		CE7371832BB13A9800EFD0D1 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		CE7371852BB13E9800EFD0D1 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		CE7371872BB13FC100EFD0D1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		CE7371892BB1400600EFD0D1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		CE73718B2BB1430E00EFD0D1 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		CE73718D2BB14CF700EFD0D1 /* BookBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBuilder.swift; sourceTree = "<group>"; };
 		CE73718F2BB1585700EFD0D1 /* ArrayToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayToString.swift; sourceTree = "<group>"; };
 		CEA634F02BAB61D300575962 /* Learnify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learnify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +65,9 @@
 		CEA634FC2BAB61D300575962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA634FF2BAB61D300575962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA635012BAB61D300575962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB5F0052BC1598200A94B47 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		CEB5F0092BC15D9300A94B47 /* BookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
 		DE699DC62BB06DF20007CA72 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DE699DC82BB06E040007CA72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE699DCA2BB06E120007CA72 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -151,8 +153,9 @@
 			children = (
 				CE7371832BB13A9800EFD0D1 /* EndPoint.swift */,
 				CE7371872BB13FC100EFD0D1 /* NetworkError.swift */,
-				CE7371892BB1400600EFD0D1 /* NetworkRequest.swift */,
-				CE73718B2BB1430E00EFD0D1 /* NetworkDataFetch.swift */,
+				CEB5F0052BC1598200A94B47 /* NetworkService.swift */,
+				CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */,
+				CEB5F0092BC15D9300A94B47 /* BookParser.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -324,8 +327,8 @@
 				CE7371882BB13FC100EFD0D1 /* NetworkError.swift in Sources */,
 				CE73717C2BB05DF800EFD0D1 /* MainTableViewCell.swift in Sources */,
 				CE73717A2BB05DE500EFD0D1 /* MainView.swift in Sources */,
-				CE73718A2BB1400600EFD0D1 /* NetworkRequest.swift in Sources */,
 				28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */,
+				CEB5F0062BC1598200A94B47 /* NetworkService.swift in Sources */,
 				28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */,
 				CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */,
 				DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */,
@@ -342,9 +345,10 @@
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,
 				CE73717F2BB0648700EFD0D1 /* Book.swift in Sources */,
 				CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */,
+				CEB5F00A2BC15D9300A94B47 /* BookParser.swift in Sources */,
 				CE7371912BB17EEC00EFD0D1 /* User.swift in Sources */,
 				CE7371812BB0746C00EFD0D1 /* MainViewModel.swift in Sources */,
-				CE73718C2BB1430E00EFD0D1 /* NetworkDataFetch.swift in Sources */,
+				CEB5F0082BC15C2C00A94B47 /* NetworkServiceProtocol.swift in Sources */,
 				CE7371902BB1585700EFD0D1 /* ArrayToString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
