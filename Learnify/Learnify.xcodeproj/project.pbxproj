@@ -11,6 +11,15 @@
 		28EA62262BB0B9AC003FBA16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */; };
 		28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62272BB0B9DD003FBA16 /* ProfileView.swift */; };
 		28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */; };
+		28FA87592BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87582BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift */; };
+		28FA87662BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87652BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift */; };
+		28FA87682BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */; };
+		28FA87702BC31F38004BC00F /* LoginScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA876F2BC31F38004BC00F /* LoginScreenLearnifyTests.swift */; };
+		28FA87722BC31F60004BC00F /* StartScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87712BC31F60004BC00F /* StartScreenLearnifyTests.swift */; };
+		28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */; };
+		28FA87762BC32011004BC00F /* LoginScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87752BC32011004BC00F /* LoginScreenLearnifyUITests.swift */; };
+		28FA87782BC3202C004BC00F /* StartScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */; };
+		28FA877A2BC32039004BC00F /* MainScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87792BC32039004BC00F /* MainScreenLearnifyUITests.swift */; };
 		CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */; };
 		CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73716F2BAFFB4000EFD0D1 /* StartView.swift */; };
 		CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371712BB00CE300EFD0D1 /* UIColor.swift */; };
@@ -41,10 +50,38 @@
 		DE699DD02BB099440007CA72 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCF2BB099440007CA72 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		28FA875A2BC31BC7004BC00F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA634E82BAB61D300575962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA634EF2BAB61D300575962;
+			remoteInfo = Learnify;
+		};
+		28FA87692BC31BF1004BC00F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEA634E82BAB61D300575962 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEA634EF2BAB61D300575962;
+			remoteInfo = Learnify;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		28EA62272BB0B9DD003FBA16 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		28FA87562BC31BC7004BC00F /* LearnifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FA87582BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenLearnifyTests.swift; sourceTree = "<group>"; };
+		28FA87632BC31BF1004BC00F /* LearnifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FA87652BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenLearnifyUITests.swift; sourceTree = "<group>"; };
+		28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28FA876F2BC31F38004BC00F /* LoginScreenLearnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenLearnifyTests.swift; sourceTree = "<group>"; };
+		28FA87712BC31F60004BC00F /* StartScreenLearnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenLearnifyTests.swift; sourceTree = "<group>"; };
+		28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenLearnifyTests.swift; sourceTree = "<group>"; };
+		28FA87752BC32011004BC00F /* LoginScreenLearnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenLearnifyUITests.swift; sourceTree = "<group>"; };
+		28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenLearnifyUITests.swift; sourceTree = "<group>"; };
+		28FA87792BC32039004BC00F /* MainScreenLearnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenLearnifyUITests.swift; sourceTree = "<group>"; };
 		CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CE73716F2BAFFB4000EFD0D1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CE7371712BB00CE300EFD0D1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -76,6 +113,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		28FA87532BC31BC7004BC00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FA87602BC31BF1004BC00F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEA634ED2BAB61D300575962 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +148,29 @@
 				28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */,
 			);
 			path = "Profile screen";
+			sourceTree = "<group>";
+		};
+		28FA87572BC31BC7004BC00F /* LearnifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				28FA87582BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift */,
+				28FA876F2BC31F38004BC00F /* LoginScreenLearnifyTests.swift */,
+				28FA87712BC31F60004BC00F /* StartScreenLearnifyTests.swift */,
+				28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */,
+			);
+			path = LearnifyTests;
+			sourceTree = "<group>";
+		};
+		28FA87642BC31BF1004BC00F /* LearnifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28FA87652BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift */,
+				28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */,
+				28FA87752BC32011004BC00F /* LoginScreenLearnifyUITests.swift */,
+				28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */,
+				28FA87792BC32039004BC00F /* MainScreenLearnifyUITests.swift */,
+			);
+			path = LearnifyUITests;
 			sourceTree = "<group>";
 		};
 		CE7371682BAF6D1800EFD0D1 /* Extensions */ = {
@@ -164,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA634F22BAB61D300575962 /* Learnify */,
+				28FA87572BC31BC7004BC00F /* LearnifyTests */,
+				28FA87642BC31BF1004BC00F /* LearnifyUITests */,
 				CEA634F12BAB61D300575962 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA634F02BAB61D300575962 /* Learnify.app */,
+				28FA87562BC31BC7004BC00F /* LearnifyTests.xctest */,
+				28FA87632BC31BF1004BC00F /* LearnifyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +303,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		28FA87552BC31BC7004BC00F /* LearnifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FA875E2BC31BC7004BC00F /* Build configuration list for PBXNativeTarget "LearnifyTests" */;
+			buildPhases = (
+				28FA87522BC31BC7004BC00F /* Sources */,
+				28FA87532BC31BC7004BC00F /* Frameworks */,
+				28FA87542BC31BC7004BC00F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28FA875B2BC31BC7004BC00F /* PBXTargetDependency */,
+			);
+			name = LearnifyTests;
+			productName = LearnifyTests;
+			productReference = 28FA87562BC31BC7004BC00F /* LearnifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28FA87622BC31BF1004BC00F /* LearnifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FA876B2BC31BF1004BC00F /* Build configuration list for PBXNativeTarget "LearnifyUITests" */;
+			buildPhases = (
+				28FA875F2BC31BF1004BC00F /* Sources */,
+				28FA87602BC31BF1004BC00F /* Frameworks */,
+				28FA87612BC31BF1004BC00F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28FA876A2BC31BF1004BC00F /* PBXTargetDependency */,
+			);
+			name = LearnifyUITests;
+			productName = LearnifyUITests;
+			productReference = 28FA87632BC31BF1004BC00F /* LearnifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CEA634EF2BAB61D300575962 /* Learnify */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEA635042BAB61D300575962 /* Build configuration list for PBXNativeTarget "Learnify" */;
@@ -255,9 +369,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					28FA87552BC31BC7004BC00F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CEA634EF2BAB61D300575962;
+					};
+					28FA87622BC31BF1004BC00F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = CEA634EF2BAB61D300575962;
+					};
 					CEA634EF2BAB61D300575962 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -276,17 +398,34 @@
 				CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				281B5F1B2BACC59D00378947 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				CE7371922BB183C000EFD0D1 /* XCRemoteSwiftPackageReference "Swinject" */,
+				28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = CEA634F12BAB61D300575962 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				CEA634EF2BAB61D300575962 /* Learnify */,
+				28FA87552BC31BC7004BC00F /* LearnifyTests */,
+				28FA87622BC31BF1004BC00F /* LearnifyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		28FA87542BC31BC7004BC00F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FA87612BC31BF1004BC00F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEA634EE2BAB61D300575962 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +458,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28FA87522BC31BC7004BC00F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA87592BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift in Sources */,
+				28FA87702BC31F38004BC00F /* LoginScreenLearnifyTests.swift in Sources */,
+				28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */,
+				28FA87722BC31F60004BC00F /* StartScreenLearnifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FA875F2BC31BF1004BC00F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA87782BC3202C004BC00F /* StartScreenLearnifyUITests.swift in Sources */,
+				28FA877A2BC32039004BC00F /* MainScreenLearnifyUITests.swift in Sources */,
+				28FA87762BC32011004BC00F /* LoginScreenLearnifyUITests.swift in Sources */,
+				28FA87682BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift in Sources */,
+				28FA87662BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEA634EC2BAB61D300575962 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +517,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		28FA875B2BC31BC7004BC00F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA634EF2BAB61D300575962 /* Learnify */;
+			targetProxy = 28FA875A2BC31BC7004BC00F /* PBXContainerItemProxy */;
+		};
+		28FA876A2BC31BF1004BC00F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEA634EF2BAB61D300575962 /* Learnify */;
+			targetProxy = 28FA87692BC31BF1004BC00F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CEA634FE2BAB61D300575962 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -367,6 +542,98 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		28FA875C2BC31BC7004BC00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learnify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learnify";
+			};
+			name = Debug;
+		};
+		28FA875D2BC31BC7004BC00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Learnify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Learnify";
+			};
+			name = Release;
+		};
+		28FA876C2BC31BF1004BC00F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learnify;
+			};
+			name = Debug;
+		};
+		28FA876D2BC31BF1004BC00F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBJ2D69UL9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Learnify;
+			};
+			name = Release;
+		};
 		CEA635022BAB61D300575962 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +807,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28FA875E2BC31BC7004BC00F /* Build configuration list for PBXNativeTarget "LearnifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FA875C2BC31BC7004BC00F /* Debug */,
+				28FA875D2BC31BC7004BC00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28FA876B2BC31BF1004BC00F /* Build configuration list for PBXNativeTarget "LearnifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FA876C2BC31BF1004BC00F /* Debug */,
+				28FA876D2BC31BF1004BC00F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEA634EB2BAB61D300575962 /* Build configuration list for PBXProject "Learnify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -567,6 +852,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.4.1;
+			};
+		};
+		28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
 			};
 		};
 		CE7371922BB183C000EFD0D1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
