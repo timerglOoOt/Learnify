@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		281B5F1D2BACC59D00378947 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 281B5F1C2BACC59D00378947 /* Lottie */; };
+		28D619532BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D619522BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift */; };
 		28EA62262BB0B9AC003FBA16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */; };
 		28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62272BB0B9DD003FBA16 /* ProfileView.swift */; };
 		28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28D619522BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenSnapshotTests.swift; sourceTree = "<group>"; };
 		28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		28EA62272BB0B9DD003FBA16 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +142,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D619542BC34BF000CBEF68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		28EA62222BB0B928003FBA16 /* Profile screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +166,7 @@
 				28FA876F2BC31F38004BC00F /* LoginScreenLearnifyTests.swift */,
 				28FA87712BC31F60004BC00F /* StartScreenLearnifyTests.swift */,
 				28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */,
+				28D619522BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift */,
 			);
 			path = LearnifyTests;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 				28FA87572BC31BC7004BC00F /* LearnifyTests */,
 				28FA87642BC31BF1004BC00F /* LearnifyUITests */,
 				CEA634F12BAB61D300575962 /* Products */,
+				28D619542BC34BF000CBEF68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,6 +328,8 @@
 				28FA875B2BC31BC7004BC00F /* PBXTargetDependency */,
 			);
 			name = LearnifyTests;
+			packageProductDependencies = (
+			);
 			productName = LearnifyTests;
 			productReference = 28FA87562BC31BC7004BC00F /* LearnifyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -465,6 +478,7 @@
 				28FA87592BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift in Sources */,
 				28FA87702BC31F38004BC00F /* LoginScreenLearnifyTests.swift in Sources */,
 				28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */,
+				28D619532BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift in Sources */,
 				28FA87722BC31F60004BC00F /* StartScreenLearnifyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
