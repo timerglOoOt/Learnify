@@ -30,6 +30,7 @@ class StartView: UIView {
         label.font = .systemFont(ofSize: 20, weight: .medium)
         label.textColor = UIColor.hexStringToUIColor(hex: "3B4651")
         label.textAlignment = .justified
+        label.accessibilityIdentifier = "Start Label"
         return label
     }()
 
@@ -44,6 +45,7 @@ class StartView: UIView {
             self?.delegate?.continueButtonDidPressed()
         }
         button.addAction(action, for: .touchUpInside)
+        button.accessibilityIdentifier = "Start button"
         return button
     }()
 

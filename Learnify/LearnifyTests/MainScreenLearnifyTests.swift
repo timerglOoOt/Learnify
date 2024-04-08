@@ -1,27 +1,49 @@
 import XCTest
+@testable import Learnify
+
+// MARK: - Хайруллин Тимур
 
 final class MainScreenLearnifyTests: XCTestCase {
+    let mockBooks = [
+        BookBuilder()
+            .addTitle(title: "1 part")
+            .addAuthors(authors: ["Auth 1"])
+            .build(),
+        BookBuilder()
+            .addTitle(title: "2 part")
+            .addAuthors(authors: ["Auth 2"])
+            .build(),
+        BookBuilder()
+            .addTitle(title: "3 part")
+            .addAuthors(authors: ["Auth 3"])
+            .build()
+    ]
+    lazy var viewModel = MainViewModel(books: mockBooks)
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_numb_row_in_section() {
+        let numberOfRows = viewModel.numberOfRowsInSection()
+
+        XCTAssertEqual(numberOfRows, mockBooks.count)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_add_book() {
+        let testBook = BookBuilder()
+            .addTitle(title: "4 part")
+            .addAuthors(authors: ["Auth 4"])
+            .build()
+
+        viewModel.addBook(testBook)
+
+        XCTAssertTrue(viewModel.books.value.contains(testBook), "Book didn't add to books")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_remove_book() {
+        let testBook = viewModel.removeBook(at: 1)
+        XCTAssertFalse(viewModel.books.value.contains(testBook))
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_get_books_async_success() async {
+        let books = await viewModel.getBooksAsync()
+        XCTAssertTrue(books == mockBooks)
     }
 }

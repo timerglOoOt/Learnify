@@ -4,8 +4,13 @@ import UIKit
 // MARK: - Хайруллин Тимур
 class MainViewModel {
     private let bookBuilder = BookBuilder()
-    let books: Dynamic<[Book]> = Dynamic([])
-    let errorMessage: Dynamic<String?> = Dynamic(nil)
+    var books: Dynamic<[Book]> = Dynamic([])
+    var errorMessage: Dynamic<String?> = Dynamic(nil)
+
+    init(books: [Book]? = nil) {
+        self.books = Dynamic(books ?? [])
+        self.errorMessage = Dynamic(nil)
+    }
 }
 
 extension MainViewModel {
@@ -53,4 +58,28 @@ extension MainViewModel {
 //                .build()
 //        ]
 //    }
+}
+
+extension MainViewModel {
+    func addBook(_ book: Book) {
+        books.value.append(book)
+    }
+
+    func removeBook(at index: Int) -> Book {
+        let book = books.value[index]
+        books.value.remove(at: index)
+        return book
+    }
+
+    func sortBooksByTitle() {
+        books.value.sort { $0.title < $1.title }
+    }
+
+    func filterBooksByAuthor(_ author: String) -> [Book] {
+        return books.value.filter { $0.authors?.contains(author) ?? false }
+    }
+
+    func getBooksAsync() async -> [Book] {
+        return books.value
+    }
 }

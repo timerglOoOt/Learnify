@@ -38,7 +38,7 @@ class MainTableViewCell: UITableViewCell {
         return label
     }()
 
-    private lazy var bookmarkImageView: UIImageView = {
+    lazy var bookmarkImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         return image

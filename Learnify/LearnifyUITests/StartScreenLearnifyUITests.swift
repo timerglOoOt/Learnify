@@ -1,5 +1,6 @@
 import XCTest
 
+// MARK: - Тимур Хайруллин
 final class StartScreenLearnifyUITests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -20,15 +21,25 @@ final class StartScreenLearnifyUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let label = app.staticTexts["Start Label"]
+        XCTAssert(label.exists)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    func test_if_button_exsist() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let button = app.buttons["Start button"]
+        XCTAssert(button.exists)
+    }
+
+    func test_button_text_is_not_added() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let expectedTitle = "Next"
+        let button = app.buttons["Start button"]
+        let buttonTitle = button.title
+        XCTAssertNotEqual(buttonTitle, expectedTitle, "Button title doesn't match expected title")
     }
 }

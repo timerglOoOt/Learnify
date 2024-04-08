@@ -19,8 +19,8 @@
 		28FA87722BC31F60004BC00F /* StartScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87712BC31F60004BC00F /* StartScreenLearnifyTests.swift */; };
 		28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */; };
 		28FA87762BC32011004BC00F /* LoginScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87752BC32011004BC00F /* LoginScreenLearnifyUITests.swift */; };
-		28FA87782BC3202C004BC00F /* StartScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */; };
 		28FA877A2BC32039004BC00F /* MainScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87792BC32039004BC00F /* MainScreenLearnifyUITests.swift */; };
+		CE42A6912BC3D8AE0024A186 /* StartScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */; };
 		CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */; };
 		CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73716F2BAFFB4000EFD0D1 /* StartView.swift */; };
 		CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371712BB00CE300EFD0D1 /* UIColor.swift */; };
@@ -487,8 +487,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FA87782BC3202C004BC00F /* StartScreenLearnifyUITests.swift in Sources */,
 				28FA877A2BC32039004BC00F /* MainScreenLearnifyUITests.swift in Sources */,
+				CE42A6912BC3D8AE0024A186 /* StartScreenLearnifyUITests.swift in Sources */,
 				28FA87762BC32011004BC00F /* LoginScreenLearnifyUITests.swift in Sources */,
 				28FA87682BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift in Sources */,
 				28FA87662BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift in Sources */,
@@ -567,7 +567,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyTests;
@@ -591,7 +591,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyTests;
@@ -613,7 +613,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyUITests;
@@ -636,7 +636,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yazzgul.LearnifyUITests;
