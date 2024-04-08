@@ -36,6 +36,7 @@
 		CE7371902BB1585700EFD0D1 /* ArrayToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73718F2BB1585700EFD0D1 /* ArrayToString.swift */; };
 		CE7371912BB17EEC00EFD0D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCD2BB087C00007CA72 /* User.swift */; };
 		CE7371942BB183C000EFD0D1 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE7371932BB183C000EFD0D1 /* Swinject */; };
+		CE75F0BD2BC4795C00712CC6 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = CE75F0BC2BC4795C00712CC6 /* SnapshotTesting */; };
 		CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F32BAB61D300575962 /* AppDelegate.swift */; };
 		CEA634F62BAB61D300575962 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F52BAB61D300575962 /* SceneDelegate.swift */; };
 		CEA634F82BAB61D300575962 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA634F72BAB61D300575962 /* StartViewController.swift */; };
@@ -119,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE75F0BD2BC4795C00712CC6 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +331,7 @@
 			);
 			name = LearnifyTests;
 			packageProductDependencies = (
+				CE75F0BC2BC4795C00712CC6 /* SnapshotTesting */,
 			);
 			productName = LearnifyTests;
 			productReference = 28FA87562BC31BC7004BC00F /* LearnifyTests.xctest */;
@@ -382,7 +385,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					28FA87552BC31BC7004BC00F = {
@@ -411,7 +417,7 @@
 				CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				281B5F1B2BACC59D00378947 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				CE7371922BB183C000EFD0D1 /* XCRemoteSwiftPackageReference "Swinject" */,
-				28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				CE75F0BB2BC4795C00712CC6 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = CEA634F12BAB61D300575962 /* Products */;
 			projectDirPath = "";
@@ -744,6 +750,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -868,20 +875,20 @@
 				minimumVersion = 4.4.1;
 			};
 		};
-		28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.16.0;
-			};
-		};
 		CE7371922BB183C000EFD0D1 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
+			};
+		};
+		CE75F0BB2BC4795C00712CC6 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 		CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -904,6 +911,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE7371922BB183C000EFD0D1 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		CE75F0BC2BC4795C00712CC6 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE75F0BB2BC4795C00712CC6 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 		CEA6350A2BAB69B000575962 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
