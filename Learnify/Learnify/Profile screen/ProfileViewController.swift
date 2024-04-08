@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 // MARK: - Хасаншина Язгуль
 
@@ -12,6 +13,8 @@ class ProfileViewController: UIViewController {
     private let viewModel: ProfileViewModel
 
     weak var delegate: ProfileViewModelDataSetterDelegate?
+
+    private var cancellable: AnyCancellable?
 
     init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
@@ -34,14 +37,25 @@ class ProfileViewController: UIViewController {
         userData()
     }
 
+//    func userData() {
+//        viewModel.obtainCurrentUser { user in
+//            self.delegate?.dataUpdater(
+//                firstname: user.firstname,
+//                surname: user.surname,
+//                commentCount: user.commentCount,
+//                bookCount: user.bookCount,
+//                info: user.info ?? "Write something...")
+//        }
+//    }
     func userData() {
-        viewModel.obtainCurrentUser { user in
+        cancellable = viewModel.$users
+            .sink { users in
             self.delegate?.dataUpdater(
-                firstname: user.firstname,
-                surname: user.surname,
-                commentCount: user.commentCount,
-                bookCount: user.bookCount,
-                info: user.info ?? "Write something...")
+                firstname: users[0].firstname,
+                surname: users[0].surname,
+                commentCount: users[0].commentCount,
+                bookCount: users[0].bookCount,
+                info: users[0].info ?? "Write something...")
         }
     }
 }
