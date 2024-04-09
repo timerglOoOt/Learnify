@@ -38,28 +38,6 @@ extension MainViewModel {
             }
         }
     }
-
-//    private func setupMockData() {
-//        books = [
-//            bookBuilder
-//                .addImageName(imageName: "book1")
-//                .addTitle(title: "The Midnight Library")
-//                .addDescription(description: "rfgyrfgyryfdvfvfvfvfvfvfvfvfffryfrifyvrv")
-//                .addAuthors(authors: ["Matt Haig"])
-//                .addIsSaved(isSaved: true)
-//                .build(),
-//            bookBuilder
-//                .addImageName(imageName: "book2")
-//                .addTitle(title: "Find a sponsor")
-//                .addAuthors(authors: ["Sylvia Ann Hewlett"])
-//                .build(),
-//            bookBuilder
-//                .addImageName(imageName: "book3")
-//                .addTitle(title: "I want a Better Catastrophe")
-//                .addAuthors(authors: ["Andrew Boyd"])
-//                .build()
-//        ]
-//    }
 }
 
 extension MainViewModel {
@@ -71,14 +49,6 @@ extension MainViewModel {
         let book = books.value[index]
         books.value.remove(at: index)
         return book
-    }
-
-    func sortBooksByTitle() {
-        books.value.sort { $0.title < $1.title }
-    }
-
-    func filterBooksByAuthor(_ author: String) -> [Book] {
-        return books.value.filter { $0.authors?.contains(author) ?? false }
     }
 
     func getBooksAsync() async -> [Book] {
