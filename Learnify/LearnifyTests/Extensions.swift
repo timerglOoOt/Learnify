@@ -14,5 +14,3 @@ extension User: Equatable {
         lhs.email == rhs.email
     }
 }
-
-

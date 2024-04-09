@@ -3,10 +3,6 @@ import SnapKit
 
 // MARK: - Хасаншина Язгуль
 
-enum AccessibilityIdentifiers {
-    static let infoTitleLabel = "info_title_label"
-    static let infoLabel = "info_label"
-}
 class ProfileView: UIView {
 
     lazy var firstnameLabel: UILabel = UILabel()
@@ -154,7 +150,6 @@ class ProfileView: UIView {
         infoTitleLabel.text = "About"
         infoTitleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         infoTitleLabel.textColor = .gray
-//        infoTitleLabel.textColor = UIColor.hexStringToUIColor(hex: "323390")
         addSubview(infoTitleLabel)
 
         infoTitleLabel.snp.makeConstraints { make in

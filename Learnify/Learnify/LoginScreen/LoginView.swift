@@ -15,6 +15,8 @@ protocol LoginViewDelegate: AnyObject {
 enum AccessibilityIdentifiers {
     static let emailTextField = "email"
     static let passwordTextField = "password"
+    static let infoTitleLabel = "info_title_label"
+    static let infoLabel = "info_label"
 }
 
 class LoginView: UIView {

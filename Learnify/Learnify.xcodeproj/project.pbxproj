@@ -17,6 +17,9 @@
 		28FA87682BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */; };
 		28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */; };
 		CE42A6912BC3D8AE0024A186 /* StartScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */; };
+		CE52BF702BC5BB2D00052C2E /* LoginScreenLearnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52BF6E2BC5BB2D00052C2E /* LoginScreenLearnifyTests.swift */; };
+		CE52BF712BC5BB2D00052C2E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52BF6F2BC5BB2D00052C2E /* Extensions.swift */; };
+		CE52BF732BC5BB4600052C2E /* LoginScreenLearnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE52BF722BC5BB4600052C2E /* LoginScreenLearnifyUITests.swift */; };
 		CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */; };
 		CE7371702BAFFB4100EFD0D1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73716F2BAFFB4000EFD0D1 /* StartView.swift */; };
 		CE7371722BB00CE300EFD0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7371712BB00CE300EFD0D1 /* UIColor.swift */; };
@@ -43,9 +46,7 @@
 		CEB5F0082BC15C2C00A94B47 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */; };
 		CEB5F00A2BC15D9300A94B47 /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0092BC15D9300A94B47 /* BookParser.swift */; };
 		CEBDFA532BC5649A00D99186 /* MainScreenSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */; };
-		DE6902542BC3832700F16DDA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6902532BC3832700F16DDA /* Extensions.swift */; };
 		DE6902562BC469C800F16DDA /* LoginScreenSnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */; };
-		DE6902592BC4875800F16DDA /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DE6902582BC4875800F16DDA /* SnapshotTesting */; };
 		DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC62BB06DF20007CA72 /* LoginView.swift */; };
 		DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC82BB06E040007CA72 /* LoginViewController.swift */; };
 		DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCA2BB06E120007CA72 /* LoginModel.swift */; };
@@ -81,6 +82,9 @@
 		28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenLearnifyTests.swift; sourceTree = "<group>"; };
 		28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenLearnifyUITests.swift; sourceTree = "<group>"; };
+		CE52BF6E2BC5BB2D00052C2E /* LoginScreenLearnifyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenLearnifyTests.swift; sourceTree = "<group>"; };
+		CE52BF6F2BC5BB2D00052C2E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE52BF722BC5BB4600052C2E /* LoginScreenLearnifyUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenLearnifyUITests.swift; sourceTree = "<group>"; };
 		CE7371692BAF6D6700EFD0D1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		CE73716F2BAFFB4000EFD0D1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		CE7371712BB00CE300EFD0D1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -105,7 +109,6 @@
 		CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CEB5F0092BC15D9300A94B47 /* BookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
 		CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenSnapshotTest.swift; sourceTree = "<group>"; };
-		DE6902532BC3832700F16DDA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenSnapShotTests.swift; sourceTree = "<group>"; };
 		DE699DC62BB06DF20007CA72 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DE699DC82BB06E040007CA72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -163,10 +166,10 @@
 		28FA87572BC31BC7004BC00F /* LearnifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				CE52BF6F2BC5BB2D00052C2E /* Extensions.swift */,
+				CE52BF6E2BC5BB2D00052C2E /* LoginScreenLearnifyTests.swift */,
 				28FA87582BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift */,
 				28FA87732BC31F74004BC00F /* MainScreenLearnifyTests.swift */,
-				28D619522BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift */,
-				CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */,
 			);
 			path = LearnifyTests;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 		28FA87642BC31BF1004BC00F /* LearnifyUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CE52BF722BC5BB4600052C2E /* LoginScreenLearnifyUITests.swift */,
 				28FA87652BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift */,
 				28FA87672BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift */,
 				28FA87772BC3202C004BC00F /* StartScreenLearnifyUITests.swift */,
@@ -292,16 +296,11 @@
 			path = AppLife;
 			sourceTree = "<group>";
 		};
-		DE6902572BC4875800F16DDA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DE69025A2BC4883300F16DDA /* LearnifySnapshotTesting */ = {
 			isa = PBXGroup;
 			children = (
+				28D619522BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift */,
+				CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */,
 				DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */,
 			);
 			path = LearnifySnapshotTesting;
@@ -494,8 +493,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBDFA532BC5649A00D99186 /* MainScreenSnapshotTest.swift in Sources */,
-				DE6902542BC3832700F16DDA /* Extensions.swift in Sources */,
 				DE6902562BC469C800F16DDA /* LoginScreenSnapShotTests.swift in Sources */,
+				CE52BF712BC5BB2D00052C2E /* Extensions.swift in Sources */,
+				CE52BF702BC5BB2D00052C2E /* LoginScreenLearnifyTests.swift in Sources */,
 				28FA87592BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift in Sources */,
 				28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */,
 				28D619532BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift in Sources */,
@@ -508,6 +508,7 @@
 			files = (
 				CE42A6912BC3D8AE0024A186 /* StartScreenLearnifyUITests.swift in Sources */,
 				28FA87682BC31BF1004BC00F /* LearnifyUITestsLaunchTests.swift in Sources */,
+				CE52BF732BC5BB4600052C2E /* LoginScreenLearnifyUITests.swift in Sources */,
 				28FA87662BC31BF1004BC00F /* ProfileScreenLearnifyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,11 +933,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		DE6902582BC4875800F16DDA /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

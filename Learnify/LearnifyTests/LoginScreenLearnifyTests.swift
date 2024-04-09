@@ -8,7 +8,6 @@ final class LoginScreenLearnifyTests: XCTestCase {
     private let user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, bookCount: 3, info: "I am a student of ITIS")
     let viewModel = LoginModel()
 
-
     func test_User_Login_Sucess() {
 
         let testUser = user

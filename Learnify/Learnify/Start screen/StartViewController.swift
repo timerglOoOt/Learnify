@@ -19,6 +19,6 @@ class StartViewController: UIViewController {
 extension StartViewController: StartViewDelegate {
     func continueButtonDidPressed() {
         // TODO: push to login controller
-        coordinator?.goToHomePage()
+        coordinator?.goToLoginPage()
     }
 }
