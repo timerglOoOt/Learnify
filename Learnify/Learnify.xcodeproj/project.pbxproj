@@ -43,6 +43,9 @@
 		CEB5F0082BC15C2C00A94B47 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */; };
 		CEB5F00A2BC15D9300A94B47 /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0092BC15D9300A94B47 /* BookParser.swift */; };
 		CEBDFA532BC5649A00D99186 /* MainScreenSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */; };
+		DE6902542BC3832700F16DDA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6902532BC3832700F16DDA /* Extensions.swift */; };
+		DE6902562BC469C800F16DDA /* LoginScreenSnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */; };
+		DE6902592BC4875800F16DDA /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = DE6902582BC4875800F16DDA /* SnapshotTesting */; };
 		DE699DC72BB06DF20007CA72 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC62BB06DF20007CA72 /* LoginView.swift */; };
 		DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC82BB06E040007CA72 /* LoginViewController.swift */; };
 		DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCA2BB06E120007CA72 /* LoginModel.swift */; };
@@ -102,6 +105,8 @@
 		CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CEB5F0092BC15D9300A94B47 /* BookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
 		CEBDFA522BC5649A00D99186 /* MainScreenSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenSnapshotTest.swift; sourceTree = "<group>"; };
+		DE6902532BC3832700F16DDA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenSnapShotTests.swift; sourceTree = "<group>"; };
 		DE699DC62BB06DF20007CA72 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DE699DC82BB06E040007CA72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE699DCA2BB06E120007CA72 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -243,6 +248,7 @@
 				CEA634F22BAB61D300575962 /* Learnify */,
 				28FA87572BC31BC7004BC00F /* LearnifyTests */,
 				28FA87642BC31BF1004BC00F /* LearnifyUITests */,
+				DE69025A2BC4883300F16DDA /* LearnifySnapshotTesting */,
 				CEA634F12BAB61D300575962 /* Products */,
 				28D619542BC34BF000CBEF68 /* Frameworks */,
 			);
@@ -284,6 +290,21 @@
 				CEA634F52BAB61D300575962 /* SceneDelegate.swift */,
 			);
 			path = AppLife;
+			sourceTree = "<group>";
+		};
+		DE6902572BC4875800F16DDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE69025A2BC4883300F16DDA /* LearnifySnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				DE6902552BC469C800F16DDA /* LoginScreenSnapShotTests.swift */,
+			);
+			path = LearnifySnapshotTesting;
 			sourceTree = "<group>";
 		};
 		DE699DC52BB06DE10007CA72 /* LoginScreen */ = {
@@ -473,6 +494,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBDFA532BC5649A00D99186 /* MainScreenSnapshotTest.swift in Sources */,
+				DE6902542BC3832700F16DDA /* Extensions.swift in Sources */,
+				DE6902562BC469C800F16DDA /* LoginScreenSnapShotTests.swift in Sources */,
 				28FA87592BC31BC7004BC00F /* ProfileScreenLearnifyTests.swift in Sources */,
 				28FA87742BC31F74004BC00F /* MainScreenLearnifyTests.swift in Sources */,
 				28D619532BC349CE00CBEF68 /* ProfileScreenSnapshotTests.swift in Sources */,
@@ -692,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -747,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -909,6 +932,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DE6902582BC4875800F16DDA /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28FA876E2BC31D29004BC00F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
