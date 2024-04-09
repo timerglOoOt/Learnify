@@ -45,7 +45,6 @@ class StartView: UIView {
             self?.delegate?.continueButtonDidPressed()
         }
         button.addAction(action, for: .touchUpInside)
-        button.accessibilityIdentifier = "Start button"
         return button
     }()
 
