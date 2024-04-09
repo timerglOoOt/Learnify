@@ -35,7 +35,6 @@ class LoginViewController: UIViewController {
         coordinator = Coordinator(navigationController: navigationController ?? UINavigationController())
         view.backgroundColor = .white
         navigationItem.hidesBackButton = true
-
         setUpBinder()
     }
 
