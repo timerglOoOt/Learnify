@@ -1,6 +1,7 @@
 import UIKit
 
-// MARK: - Хайруллин Тимур 
+// MARK: - Хайруллин Тимур
+
 class MainViewController: UIViewController {
     private let mainView = MainView(frame: .zero)
     private let viewModel: MainViewModel
@@ -15,8 +16,8 @@ class MainViewController: UIViewController {
         mainView.setupDataSource(with: self)
         mainView.setupDelegate(with: self)
 
-        // FIXME: разобраться с сетевым запросом
-//        viewModel.getBooksByRequest(requestString: "harry+potter")
+        setupBindings()
+
     }
 
     init(viewModel: MainViewModel) {
@@ -28,6 +29,34 @@ class MainViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: Setup bindings
+
+extension MainViewController {
+    func setupBindings() {
+        Task {
+            await setupBooks()
+            await setupError()
+        }
+    }
+
+    func setupBooks() async {
+        viewModel.getBooksByQuery(query: "Аптека")
+        self.viewModel.books.bind { [weak self] _ in
+            self?.mainView.reloadData()
+        }
+    }
+
+    func setupError() async {
+        self.viewModel.errorMessage.bind { [weak self] message in
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }
+    }
+}
+
+// MARK: Setup Table View
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

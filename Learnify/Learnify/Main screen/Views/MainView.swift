@@ -39,4 +39,8 @@ extension MainView {
     func setupDelegate(with delegate: UITableViewDelegate) {
         self.booksTableView.delegate = delegate
     }
+
+    func reloadData() {
+        booksTableView.reloadData()
+    }
 }

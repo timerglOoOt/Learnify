@@ -2,6 +2,7 @@ import Foundation
 
 // MARK: - Хайруллин Тимур
 enum NetworkError: Error {
-    case urlError
-    case canNotParseData
+    case invalidURL
+    case noData
+    case decodingError
 }
