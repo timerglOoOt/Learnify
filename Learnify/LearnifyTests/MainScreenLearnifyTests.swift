@@ -18,7 +18,10 @@ final class MainScreenLearnifyTests: XCTestCase {
             .addAuthors(authors: ["Auth 3"])
             .build()
     ]
-    lazy var viewModel = MainViewModel(books: mockBooks)
+    let mockNetworkService = MockNetworkService()
+    lazy var viewModel = MainViewModel(books: mockBooks, network: mockNetworkService)
+
+    // MARK: Простые тесты
 
     func test_numb_row_in_section() {
         let numberOfRows = viewModel.numberOfRowsInSection()
@@ -42,8 +45,32 @@ final class MainScreenLearnifyTests: XCTestCase {
         XCTAssertFalse(viewModel.books.value.contains(testBook))
     }
 
+    // MARK: Async тесты
     func test_get_books_async_success() async {
         let books = await viewModel.getBooksAsync()
         XCTAssertTrue(books == mockBooks)
+    }
+
+    func test_get_books_by_query_success() {
+        let booksExpectation = expectation(description: "Excpecting books")
+        let expectedURL = "http://www.googleapis.com/books/v1/volumes/mockbooks"
+
+        viewModel.getBooksByQuery(query: expectedURL)
+        viewModel.books.bind { _ in
+            booksExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1.0)
+        XCTAssertEqual(viewModel.books.value, mockBooks)
+    }
+
+    func test_get_books_by_query_failure() {
+        let booksExpectation = expectation(description: "Excpecting books")
+        let unexpectedURL = "http://www.googleapis.com/books/v1/volumes/mock"
+
+        viewModel.getBooksByQuery(query: unexpectedURL)
+        viewModel.errorMessage.bind { _ in
+            booksExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1.0)
     }
 }

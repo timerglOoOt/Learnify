@@ -6,10 +6,12 @@ class MainViewModel {
     private let bookBuilder = BookBuilder()
     var books: Dynamic<[Book]> = Dynamic([])
     var errorMessage: Dynamic<String?> = Dynamic(nil)
+    var network: NetworkServiceProtocol?
 
-    init(books: [Book]? = nil) {
+    init(books: [Book]? = nil, network: NetworkServiceProtocol? = nil) {
         self.books = Dynamic(books ?? [])
         self.errorMessage = Dynamic(nil)
+        self.network = network
     }
 }
 
@@ -27,7 +29,7 @@ extension MainViewModel {
     }
 
     func getBooksByQuery(query: String) {
-        NetworkService.shared.searchBooks(query: query) { [weak self] result in
+        network?.searchBooks(query: query) { [weak self] result in
             switch result {
             case .success(let books):
                 self?.books.value = books
