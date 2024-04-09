@@ -17,17 +17,19 @@ final class LoginScreenLearnifyUITests: XCTestCase {
 
         let app = XCUIApplication()
         app.launch()
-
+        app.buttons["Next"].tap()
         let emailTextField = app.textFields["email"]
-        XCTAssertFalse(emailTextField.exists)
+        XCTAssert(emailTextField.exists, "EmailTextField doesn't exsist!")
     }
 
     func testPasswordTextFieldExists() throws {
+
         let app = XCUIApplication()
         app.launch()
+        app.buttons["Next"].tap()
 
         let passwordTextField = app.textFields["password"]
-        XCTAssertFalse(passwordTextField.exists)
+        XCTAssert(passwordTextField.exists, "PasswordTextField doesn't exsist!")
     }
 
 }
