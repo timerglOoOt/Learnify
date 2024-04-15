@@ -72,13 +72,13 @@ final class MainScreenLearnifyTests: XCTestCase {
         let booksExpectation = expectation(description: "Expecting books")
         let unexpectedURL = "http://www.googleapis.com/books/v1/volumes/mock"
 
-        viewModel.getBooksByQuery(query: unexpectedURL)
         viewModel.errorMessage
-            .sink { error in
-                print(error)
+            .sink { _ in
                 booksExpectation.fulfill()
             }
             .store(in: &cancellables)
+
+        viewModel.getBooksByQuery(query: unexpectedURL)
         waitForExpectations(timeout: 1.0)
     }
 }
