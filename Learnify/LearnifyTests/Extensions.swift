@@ -5,6 +5,7 @@
 //  Created by Faki Doosuur Doris on 08.04.2024.
 //
 import Foundation
+import Combine
 
 @testable import struct Learnify.User
 @testable import struct Learnify.Book
@@ -22,7 +23,7 @@ extension User: Equatable {
 
 class MockNetworkService: NetworkServiceProtocol {
     let mockURL = "http://www.googleapis.com/books/v1/volumes/mockbooks"
-    let mockBooks = [
+    let mockBooks: AnyPublisher<[Book], Error> = Just([
         BookBuilder()
             .addTitle(title: "1 part")
             .addAuthors(authors: ["Auth 1"])
@@ -35,12 +36,15 @@ class MockNetworkService: NetworkServiceProtocol {
             .addTitle(title: "3 part")
             .addAuthors(authors: ["Auth 3"])
             .build()
-    ]
+    ])
+    .setFailureType(to: Error.self)
+    .eraseToAnyPublisher()
 
-    func searchBooks(query: String, completion: @escaping (Result<[Book], Error>) -> Void) {
+    func searchBooks(query: String) -> AnyPublisher<[Book], Error> {
         if mockURL.elementsEqual(query) {
-            completion(.success(mockBooks))
+            return mockBooks
+        } else {
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
-        completion(.failure(NetworkError.invalidURL))
     }
 }

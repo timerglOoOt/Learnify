@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 // MARK: - Хайруллин Тимур
 
@@ -6,31 +7,14 @@ class NetworkService: NetworkServiceProtocol {
     static let shared = NetworkService()
     private init() {}
 
-    func searchBooks(query: String, completion: @escaping (Result<[Book], Error>) -> Void) {
+    func searchBooks(query: String) -> AnyPublisher<[Book], Error> {
         guard let url = EndPoint(path: query).url else {
-            completion(.failure(NetworkError.invalidURL))
-            return
+            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
-
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-
-            guard let data = data else {
-                completion(.failure(NetworkError.noData))
-                return
-            }
-
-            do {
-                let decoder = JSONDecoder()
-                let response = try decoder.decode(BooksResponse.self, from: data)
-                let books = BookParser.extractBooks(from: response)
-                completion(.success(books))
-            } catch {
-                completion(.failure(NetworkError.decodingError))
-            }
-        }.resume()
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: BooksResponse.self, decoder: JSONDecoder())
+            .map { BookParser.extractBooks(from: $0) }
+            .eraseToAnyPublisher()
     }
 }

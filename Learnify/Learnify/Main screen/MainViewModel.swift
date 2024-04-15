@@ -1,57 +1,70 @@
 import Foundation
 import UIKit
+import Combine
 
 // MARK: - Хайруллин Тимур
 class MainViewModel {
     private let bookBuilder = BookBuilder()
-    var books: Dynamic<[Book]> = Dynamic([])
-    var errorMessage: Dynamic<String?> = Dynamic(nil)
-    var network: NetworkServiceProtocol?
+    private var cancellables = Set<AnyCancellable>()
+    @Published var books: [Book] = []
+    private var network: NetworkServiceProtocol
+    var errorMessage: PassthroughSubject<NetworkError, Never> = .init()
 
     init(books: [Book]? = nil, network: NetworkServiceProtocol? = nil) {
-        self.books = Dynamic(books ?? [])
-        self.errorMessage = Dynamic(nil)
-        self.network = network
+        self.books = books ?? []
+        self.network = network ?? NetworkService.shared
     }
 }
 
 extension MainViewModel {
     func numberOfRowsInSection() -> Int {
-        books.value.count
+        books.count
     }
 
     func configureCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseIdentifier, for: indexPath) as? MainTableViewCell
         guard let cell = cell else { return UITableViewCell() }
-        cell.configure(with: books.value[indexPath.row])
+        cell.configure(with: books[indexPath.row])
 
         return cell
     }
 
     func getBooksByQuery(query: String) {
-        network?.searchBooks(query: query) { [weak self] result in
-            switch result {
-            case .success(let books):
-                self?.books.value = books
-            case .failure(let error):
-                self?.errorMessage.value = error.localizedDescription
+        network.searchBooks(query: query)
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure(let error):
+                    self?.errorMessage.send(error as? NetworkError ?? .noData)
+                case .finished:
+                    break
+                }
+            } receiveValue: { [weak self] books in
+                self?.books = books
             }
-        }
+            .store(in: &cancellables)
     }
 }
 
 extension MainViewModel {
     func addBook(_ book: Book) {
-        books.value.append(book)
+        books.append(book)
     }
 
     func removeBook(at index: Int) -> Book {
-        let book = books.value[index]
-        books.value.remove(at: index)
+        let book = books[index]
+        books.remove(at: index)
         return book
     }
 
+    func sortBooksByTitle() {
+        books.sort { $0.title < $1.title }
+    }
+
+    func filterBooksByAuthor(_ author: String) -> [Book] {
+        return books.filter { $0.authors?.contains(author) ?? false }
+    }
+
     func getBooksAsync() async -> [Book] {
-        return books.value
+        return books
     }
 }
