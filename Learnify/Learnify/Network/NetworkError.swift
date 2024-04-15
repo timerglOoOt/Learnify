@@ -1,8 +1,8 @@
 import Foundation
 
 // MARK: - Хайруллин Тимур
-enum NetworkError: Error {
-    case invalidURL
-    case noData
-    case decodingError
+enum NetworkError: String, Error {
+    case invalidURL = "Invalid URL!"
+    case noData = "No Data found!"
+    case decodingError = "Catched decoding error!"
 }

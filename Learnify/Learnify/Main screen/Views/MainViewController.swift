@@ -1,10 +1,12 @@
 import UIKit
+import Combine
 
 // MARK: - Хайруллин Тимур
 
 class MainViewController: UIViewController {
     private let mainView = MainView(frame: .zero)
     private let viewModel: MainViewModel
+    private var cancellables = Set<AnyCancellable>()
 
     override func loadView() {
         view = mainView
@@ -17,7 +19,7 @@ class MainViewController: UIViewController {
         mainView.setupDelegate(with: self)
 
         setupBindings()
-
+        viewModel.getBooksByQuery(query: "Рyбин")
     }
 
     init(viewModel: MainViewModel) {
@@ -34,25 +36,29 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
     func setupBindings() {
-        Task {
-            await setupBooks()
-            await setupError()
-        }
+        setupBooks()
+        setupError()
     }
 
-    func setupBooks() async {
-        viewModel.getBooksByQuery(query: "Аптека")
-        self.viewModel.books.bind { [weak self] _ in
+    func setupBooks() {
+    viewModel.$books
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] _ in
             self?.mainView.reloadData()
         }
+        .store(in: &cancellables)
     }
 
-    func setupError() async {
-        self.viewModel.errorMessage.bind { [weak self] message in
-            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self?.present(alert, animated: true, completion: nil)
-        }
+    func setupError() {
+        viewModel.errorMessage
+            .compactMap { $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] message in
+                let alert = UIAlertController(title: "Error", message: message.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
+            .store(in: &cancellables)
     }
 }
 

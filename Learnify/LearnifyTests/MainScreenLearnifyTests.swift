@@ -1,9 +1,11 @@
 import XCTest
 @testable import Learnify
+import Combine
 
 // MARK: - Хайруллин Тимур
 
 final class MainScreenLearnifyTests: XCTestCase {
+    private var cancellables = Set<AnyCancellable>()
     let mockBooks = [
         BookBuilder()
             .addTitle(title: "1 part")
@@ -37,12 +39,12 @@ final class MainScreenLearnifyTests: XCTestCase {
 
         viewModel.addBook(testBook)
 
-        XCTAssertTrue(viewModel.books.value.contains(testBook), "Book didn't add to books")
+        XCTAssertTrue(viewModel.books.contains(testBook), "Book didn't add to books")
     }
 
     func test_remove_book() {
         let testBook = viewModel.removeBook(at: 1)
-        XCTAssertFalse(viewModel.books.value.contains(testBook))
+        XCTAssertFalse(viewModel.books.contains(testBook))
     }
 
     // MARK: Async тесты
@@ -52,25 +54,31 @@ final class MainScreenLearnifyTests: XCTestCase {
     }
 
     func test_get_books_by_query_success() {
-        let booksExpectation = expectation(description: "Excpecting books")
+        let booksExpectation = expectation(description: "Expecting books")
         let expectedURL = "http://www.googleapis.com/books/v1/volumes/mockbooks"
 
         viewModel.getBooksByQuery(query: expectedURL)
-        viewModel.books.bind { _ in
-            booksExpectation.fulfill()
-        }
+        viewModel.$books
+            .sink { _ in
+                booksExpectation.fulfill()
+            }
+            .store(in: &cancellables)
+
         waitForExpectations(timeout: 1.0)
-        XCTAssertEqual(viewModel.books.value, mockBooks)
+        XCTAssertEqual(viewModel.books, mockBooks)
     }
 
     func test_get_books_by_query_failure() {
-        let booksExpectation = expectation(description: "Excpecting books")
+        let booksExpectation = expectation(description: "Expecting books")
         let unexpectedURL = "http://www.googleapis.com/books/v1/volumes/mock"
 
         viewModel.getBooksByQuery(query: unexpectedURL)
-        viewModel.errorMessage.bind { _ in
-            booksExpectation.fulfill()
-        }
+        viewModel.errorMessage
+            .sink { error in
+                print(error)
+                booksExpectation.fulfill()
+            }
+            .store(in: &cancellables)
         waitForExpectations(timeout: 1.0)
     }
 }
