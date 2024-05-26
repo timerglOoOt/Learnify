@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
 
     private let viewModel: LoginModel
 
-    private var coordinator: Coordinator?
-
     init(viewModel: LoginModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -32,7 +30,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.delegate = self
-        coordinator = Coordinator(navigationController: navigationController ?? UINavigationController())
         view.backgroundColor = .white
         navigationItem.hidesBackButton = true
         setUpBinder()
@@ -43,7 +40,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success:
                 print("success")
-                self?.coordinator?.goToHomePage()
+                self?.viewModel.signInUser()
             case .failure(let error):
                 print("Failure \(error.localizedDescription)")
             }
