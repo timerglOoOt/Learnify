@@ -11,6 +11,7 @@ import UIKit
 
 protocol LoginViewDelegate: AnyObject {
     func didPressLogin()
+    func didPressRegistration()
 }
 enum AccessibilityIdentifiers {
     static let emailTextField = "email"
@@ -145,6 +146,10 @@ class LoginView: UIView {
         dontHaveAccount.text = "Don't have an account?"
         dontHaveAccount.textColor = .black
         dontHaveAccount.font = UIFont.systemFont(ofSize: 15)
+        let action = UIAction { [weak self] _ in
+            self?.delegate?.didPressRegistration()
+        }
+        signInButton.addAction(action, for: .touchUpInside)
         dontHaveAccount.snp.makeConstraints { make in
             make.top.equalTo(signInButton.snp.bottom).offset(100)
             make.centerX.equalToSuperview()

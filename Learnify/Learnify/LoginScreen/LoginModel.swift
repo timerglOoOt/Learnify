@@ -59,4 +59,7 @@ class LoginModel {
             }
         }
     }
+    func goToSignUpController() {
+        delegate?.goToSignUpController()
+    }
 }
