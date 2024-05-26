@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseAuth
 
 // MARK: - Хайруллин Тимур
 

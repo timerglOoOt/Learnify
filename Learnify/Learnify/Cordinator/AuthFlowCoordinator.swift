@@ -30,9 +30,13 @@ class AuthFlowCoordinator: Coordinator {
 }
 
 extension AuthFlowCoordinator: StartOutput {
-    func goToLogin() {
-        goToLoginController()
+    func goToReg() {
+        goToSignUpController()
     }
+    
+//    func goToLogin() {
+//        goToLoginController()
+//    }
 }
 
 // TODO: сделать для регистрации
@@ -46,12 +50,14 @@ extension AuthFlowCoordinator: LoginOutput, SignUpOutput {
     }
 
     func goToSignUpController() {
-//        let signUpViewController = SignUpModuleBuilder().build(output: self)
-//        navigationController.setViewControllers([signUpViewController], animated: true)
+        print("reg screen called")
+        let signUpViewController = SignUpModuleBuilder().build(output: self)
+        navigationController.setViewControllers([signUpViewController], animated: true)
 
     }
 
     func goToLoginController() {
+        print("login called")
         let signInViewController = LoginModuleBuilder().build(output: self)
         navigationController.setViewControllers([signInViewController], animated: true)
     }

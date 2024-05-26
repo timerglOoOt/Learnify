@@ -8,13 +8,17 @@
 import Foundation
 
 protocol StartOutput: AnyObject {
-    func goToLogin()
+//    func goToLogin()
+    func goToReg()
 }
 
 class StartViewModel {
     weak var delegate: StartOutput?
 
-    func goToLogin() {
-        delegate?.goToLogin()
+//    func goToLogin() {
+//        delegate?.goToLogin()
+//    }
+    func goToReg() {
+        delegate?.goToReg()
     }
 }

@@ -163,6 +163,10 @@ class LoginView: UIView {
         signUpNowButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
         signUpNowButton.setTitleColor(.gray, for: .highlighted)
         signUpNowButton.clipsToBounds = true
+        let action = UIAction { [weak self] _ in
+            self?.delegate?.didPressRegistration()
+        }
+        signUpNowButton.addAction(action, for: .touchUpInside)
         signUpNowButton.layer.cornerRadius = 10
         signUpNowButton.snp.makeConstraints { make in
             make.top.equalTo(dontHaveAccount.snp.bottom).offset(15)
