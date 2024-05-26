@@ -15,11 +15,11 @@ protocol MainFlowCoordinatorProtocol: AnyObject {
 }
 
 class MainFlowCoordinator: Coordinator {
-    var navigationController: UINavigationController
+    var window: UIWindow
     private var mainFlowCoordinatorProtocol: MainFlowCoordinatorProtocol?
 
-    init(navigationController: UINavigationController, mainFlowCoordinatorProtocol: MainFlowCoordinatorProtocol) {
-        self.navigationController = navigationController
+    init(window: UIWindow, mainFlowCoordinatorProtocol: MainFlowCoordinatorProtocol) {
+        self.window = window
         self.mainFlowCoordinatorProtocol = mainFlowCoordinatorProtocol
     }
 
@@ -31,6 +31,7 @@ class MainFlowCoordinator: Coordinator {
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person"), tag: 1)
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [mainViewController, profileViewController]
-        navigationController.setViewControllers([tabBarController], animated: true)
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
     }
 }
