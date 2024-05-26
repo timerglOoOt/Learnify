@@ -180,4 +180,13 @@ extension LoginView: UITextFieldDelegate {
         }
         return true
     }
+
+    func configureSignInForm() -> (String?, String?)? {
+        let email = emailTextfield.isEmptyTextField()
+        let password = passwordTextfield.isEmptyTextField()
+        if email || password {
+            return nil
+        }
+        return (emailTextfield.text, passwordTextfield.text)
+    }
 }

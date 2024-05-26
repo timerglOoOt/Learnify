@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController {
                 firstname: users[0].firstname,
                 surname: users[0].surname,
                 commentCount: users[0].commentCount,
-                bookCount: users[0].bookCount,
+                bookCount: users[0].booksId.count,
                 info: users[0].info ?? "Write something...")
         }
     }

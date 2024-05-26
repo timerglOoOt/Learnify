@@ -31,7 +31,9 @@ protocol LogoutOutput: AnyObject {
 
 class LoginModel {
     weak var delegate: LoginOutput?
-    private let user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, bookCount: 3, info: "I am a student of ITIS")
+    weak var controller: LoginViewController?
+    private lazy var firebase = FirebaseManager(alertShowable: controller)
+    private let user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, booksId: [], info: "I am a student of ITIS")
 
     var userValidationResult = Dynamic<Result<User, Error>>(.failure(UserValidationError.incorrectCredentials))
 
@@ -45,7 +47,16 @@ class LoginModel {
         }
     }
 
-    func signInUser() {
-        delegate?.signedInUser()
+    // MARK: - Хайруллин Тимур. Авторизация пользователя с сохранением в UserDefaults
+    func signInUser(email: String?, password: String?) {
+        controller?.view.showBlurLoader()
+        Task {
+            let curUser = await firebase.signInUser(email: email, password: password)
+            UserDefaults.standard.set(curUser, forKey: "curUser")
+            DispatchQueue.main.async { [weak self] in
+                self?.delegate?.signedInUser()
+                self?.controller?.view.removeBlurLoader()
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ import Combine
 
 class ProfileViewModel {
 
-    private var user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, bookCount: 3, info: "I am a student of ITIS")
+    private var user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, booksId: [], info: "I am a student of ITIS")
 
     @Published var users = [
         User(
@@ -15,7 +15,7 @@ class ProfileViewModel {
             email: "doosuur14@gmail.com",
             password: "12345",
             commentCount: 2,
-            bookCount: 3,
+            booksId: [],
             info: "I am a student of ITIS"
         )]
 

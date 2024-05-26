@@ -7,7 +7,7 @@ class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     // TODO: Добавить сохранение в UserDefaults
 //    var isLogged = UserDefaults.standard.string(forKey: "curUser") != ""
-    var isLogged = true
+    var isLogged = false
     var flowCoordinator: Coordinator?
 
     init(navigationController: UINavigationController) {

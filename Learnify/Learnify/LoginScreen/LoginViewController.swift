@@ -30,9 +30,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.delegate = self
+        viewModel.controller = self
         view.backgroundColor = .white
         navigationItem.hidesBackButton = true
-        setUpBinder()
+//        setUpBinder()
     }
 
     private func setUpBinder() {
@@ -40,7 +41,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success:
                 print("success")
-                self?.viewModel.signInUser()
+//                self?.viewModel.signInUser()
             case .failure(let error):
                 print("Failure \(error.localizedDescription)")
             }
@@ -48,12 +49,22 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - Хайруллин Тимур
+
 extension LoginViewController: LoginViewDelegate {
     func didPressLogin() {
-        guard let email = contentView.emailTextfield.text, let password = contentView.passwordTextfield.text else {
-            print("Please enter email and password")
-            return
-        }
-        viewModel.login(email, password: password)
+//        guard let email = contentView.emailTextfield.text, let password = contentView.passwordTextfield.text else {
+//            print("Please enter email and password")
+//            return
+//        }
+//        viewModel.login(email, password: password)
+
+        guard let form = contentView.configureSignInForm() else {
+            self.showAlert(
+                title: "Error",
+                message: "You are trying to send an empty field! Please enter the text."
+            )
+            return }
+        viewModel.signInUser(email: form.0, password: form.1)
     }
 }

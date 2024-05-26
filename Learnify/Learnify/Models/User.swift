@@ -15,7 +15,7 @@ struct User {
     let email: String
     let password: String
     var commentCount: Int
-    var bookCount: Int
+    var booksId: [String]
     var info: String?
 
 }
