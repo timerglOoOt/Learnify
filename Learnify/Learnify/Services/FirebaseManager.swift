@@ -96,12 +96,12 @@ class FirebaseManager {
 
         do {
             try await dataBase.collection("users").document(userId).updateData([
-                "cards": FieldValue.arrayUnion([bookData])
+                "booksId": FieldValue.arrayUnion([bookData])
             ])
-            print("Card added to user successfully.")
+            print("Book added to user successfully.")
         } catch {
-            print("Error adding card to user: \(error.localizedDescription)")
-            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error adding card to user: \(error.localizedDescription)")
+            print("Error adding book to user: \(error.localizedDescription)")
+            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error adding book to user: \(error.localizedDescription)")
         }
     }
 
@@ -110,12 +110,12 @@ class FirebaseManager {
 
         do {
             try await dataBase.collection("users").document(userId).updateData([
-                "cards": FieldValue.arrayRemove([bookData])
+                "booksId": FieldValue.arrayRemove([bookData])
             ])
-            print("Card removed from user successfully.")
+            print("Book removed from user successfully.")
         } catch {
-            print("Error removing card from user: \(error.localizedDescription)")
-            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error removing card from user: \(error.localizedDescription)")
+            print("Error removing book from user: \(error.localizedDescription)")
+            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error removing book from user: \(error.localizedDescription)")
         }
     }
 
@@ -132,8 +132,8 @@ class FirebaseManager {
                 return bookId
             }
         } catch {
-            print("Error fetching cards for user: \(error.localizedDescription)")
-            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error fetching cards for user: \(error.localizedDescription)")
+            print("Error fetching books for user: \(error.localizedDescription)")
+            await alertShowable?.showCustomAlertAsync(title: "Error", message: "Error fetching books for user: \(error.localizedDescription)")
             return nil
         }
     }

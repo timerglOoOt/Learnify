@@ -48,8 +48,8 @@ struct SwiftUIMainView: View {
                 viewModel.getBooksByQuery(query: newSearchText)
             }
             .padding(.bottom, 40)
-            .environmentObject(viewModel)
         }
+        .environmentObject(MainViewModel())
     }
 }
 
