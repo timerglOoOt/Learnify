@@ -26,6 +26,7 @@ class StartViewController: UIViewController {
 
 extension StartViewController: StartViewDelegate {
     func continueButtonDidPressed() {
-        viewModel.goToLogin()
+       //viewModel.goToLogin()
+        viewModel.goToReg()
     }
 }

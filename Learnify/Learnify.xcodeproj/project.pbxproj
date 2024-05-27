@@ -53,7 +53,6 @@
 		CEC83E4E2C036E6300F16C00 /* MainModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC83E4D2C036E6300F16C00 /* MainModuleBuilder.swift */; };
 		CEC83E502C036F6500F16C00 /* ProfileModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC83E4F2C036F6500F16C00 /* ProfileModuleBuilder.swift */; };
 		CEC83E522C0382BD00F16C00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC83E512C0382BD00F16C00 /* GoogleService-Info.plist */; };
-		CEC83E552C03883A00F16C00 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83E542C03883A00F16C00 /* FirebaseAuth */; };
 		CEC83E572C03883A00F16C00 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83E562C03883A00F16C00 /* FirebaseDatabase */; };
 		CEC83E592C03883A00F16C00 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83E582C03883A00F16C00 /* FirebaseFirestore */; };
 		CEC83E5B2C03883A00F16C00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CEC83E5A2C03883A00F16C00 /* FirebaseStorage */; };
@@ -68,6 +67,11 @@
 		DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DC82BB06E040007CA72 /* LoginViewController.swift */; };
 		DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCA2BB06E120007CA72 /* LoginModel.swift */; };
 		DE699DD02BB099440007CA72 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE699DCF2BB099440007CA72 /* AppCoordinator.swift */; };
+		DED4A0B12C03D44200C65AAB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DED4A0B02C03D44200C65AAB /* FirebaseAuth */; };
+		DEE9146C2C03B67E007ECB4A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9146B2C03B67E007ECB4A /* RegistrationView.swift */; };
+		DEE9146E2C03B68E007ECB4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9146D2C03B68E007ECB4A /* RegistrationViewController.swift */; };
+		DEE914702C03B6AC007ECB4A /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9146F2C03B6AC007ECB4A /* RegistrationModel.swift */; };
+		DEE914742C03C963007ECB4A /* SignUpModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914732C03C963007ECB4A /* SignUpModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +151,10 @@
 		DE699DCA2BB06E120007CA72 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		DE699DCD2BB087C00007CA72 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE699DCF2BB099440007CA72 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DEE9146B2C03B67E007ECB4A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		DEE9146D2C03B68E007ECB4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		DEE9146F2C03B6AC007ECB4A /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		DEE914732C03C963007ECB4A /* SignUpModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,10 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC83E572C03883A00F16C00 /* FirebaseDatabase in Frameworks */,
+				DED4A0B12C03D44200C65AAB /* FirebaseAuth in Frameworks */,
 				CEC83E592C03883A00F16C00 /* FirebaseFirestore in Frameworks */,
 				CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */,
 				CEC83E5B2C03883A00F16C00 /* FirebaseStorage in Frameworks */,
-				CEC83E552C03883A00F16C00 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		CEA634F22BAB61D300575962 /* Learnify */ = {
 			isa = PBXGroup;
 			children = (
+				DEE9146A2C03B61A007ECB4A /* RegistrationScreen */,
 				CEC83E5C2C038C5200F16C00 /* Services */,
 				CEC83E462C0357AC00F16C00 /* Module Builders */,
 				CE73717D2BB0647B00EFD0D1 /* Models */,
@@ -342,6 +351,7 @@
 				CEC83E492C03593300F16C00 /* StartModuleBuilder.swift */,
 				CEC83E4D2C036E6300F16C00 /* MainModuleBuilder.swift */,
 				CEC83E4F2C036F6500F16C00 /* ProfileModuleBuilder.swift */,
+				DEE914732C03C963007ECB4A /* SignUpModuleBuilder.swift */,
 			);
 			path = "Module Builders";
 			sourceTree = "<group>";
@@ -405,6 +415,16 @@
 			path = Cordinator;
 			sourceTree = "<group>";
 		};
+		DEE9146A2C03B61A007ECB4A /* RegistrationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DEE9146B2C03B67E007ECB4A /* RegistrationView.swift */,
+				DEE9146D2C03B68E007ECB4A /* RegistrationViewController.swift */,
+				DEE9146F2C03B6AC007ECB4A /* RegistrationModel.swift */,
+			);
+			path = RegistrationScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -463,10 +483,10 @@
 			name = Learnify;
 			packageProductDependencies = (
 				CEA6350A2BAB69B000575962 /* SnapKit */,
-				CEC83E542C03883A00F16C00 /* FirebaseAuth */,
 				CEC83E562C03883A00F16C00 /* FirebaseDatabase */,
 				CEC83E582C03883A00F16C00 /* FirebaseFirestore */,
 				CEC83E5A2C03883A00F16C00 /* FirebaseStorage */,
+				DED4A0B02C03D44200C65AAB /* FirebaseAuth */,
 			);
 			productName = Learnify;
 			productReference = CEA634F02BAB61D300575962 /* Learnify.app */;
@@ -603,11 +623,14 @@
 			files = (
 				CE7371782BB05DD700EFD0D1 /* MainViewController.swift in Sources */,
 				CE7371882BB13FC100EFD0D1 /* NetworkError.swift in Sources */,
+				DEE914702C03B6AC007ECB4A /* RegistrationModel.swift in Sources */,
 				CE73717C2BB05DF800EFD0D1 /* MainTableViewCell.swift in Sources */,
+				DEE9146C2C03B67E007ECB4A /* RegistrationView.swift in Sources */,
 				CEC83E652C0397C800F16C00 /* UIViewController+Alert.swift in Sources */,
 				CE73717A2BB05DE500EFD0D1 /* MainView.swift in Sources */,
 				28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */,
 				CEC83E672C039AD200F16C00 /* SwiftUICustomTextField.swift in Sources */,
+				DEE914742C03C963007ECB4A /* SignUpModuleBuilder.swift in Sources */,
 				CEB5F0062BC1598200A94B47 /* NetworkService.swift in Sources */,
 				28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */,
 				CEC83E6A2C039C2100F16C00 /* UICustomTextField.swift in Sources */,
@@ -622,6 +645,7 @@
 				CE73718E2BB14CF700EFD0D1 /* BookBuilder.swift in Sources */,
 				DE699DCB2BB06E120007CA72 /* LoginModel.swift in Sources */,
 				CEC83E4A2C03593300F16C00 /* StartModuleBuilder.swift in Sources */,
+				DEE9146E2C03B68E007ECB4A /* RegistrationViewController.swift in Sources */,
 				CEC83E482C03580400F16C00 /* LoginModuleBuilder.swift in Sources */,
 				CEC83E452C03574400F16C00 /* AuthFlowCoordinator.swift in Sources */,
 				CEC83E502C036F6500F16C00 /* ProfileModuleBuilder.swift in Sources */,
@@ -997,8 +1021,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				kind = exactVersion;
+				version = 10.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1014,11 +1038,6 @@
 			package = CEA635092BAB69B000575962 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		CEC83E542C03883A00F16C00 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEC83E532C03883A00F16C00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
 		CEC83E562C03883A00F16C00 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEC83E532C03883A00F16C00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1033,6 +1052,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEC83E532C03883A00F16C00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		DED4A0B02C03D44200C65AAB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC83E532C03883A00F16C00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

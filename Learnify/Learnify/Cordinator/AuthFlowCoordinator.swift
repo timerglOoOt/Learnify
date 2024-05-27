@@ -15,21 +15,26 @@ protocol AuthFlowCoordinatorOutput: AnyObject {
 }
 
 class AuthFlowCoordinator: Coordinator {
-    var navigationController: UINavigationController
+    var window: UIWindow
     private var authFlowCoordinatorOutput: AuthFlowCoordinatorOutput?
 
-    init(navigationController: UINavigationController, authFlowCoordinatorOutput: AuthFlowCoordinatorOutput) {
-        self.navigationController = navigationController
+    init(window: UIWindow, authFlowCoordinatorOutput: AuthFlowCoordinatorOutput) {
+        self.window = window
         self.authFlowCoordinatorOutput = authFlowCoordinatorOutput
     }
 
     func start() {
         let startController = StartModuleBuilder().build(output: self)
-        navigationController.setViewControllers([startController], animated: true)
+        window.rootViewController = startController
+        window.makeKeyAndVisible()
     }
 }
 
 extension AuthFlowCoordinator: StartOutput {
+    func goToReg() {
+        goToSignUpController()
+    }
+    
     func goToLogin() {
         goToLoginController()
     }
@@ -46,13 +51,15 @@ extension AuthFlowCoordinator: LoginOutput, SignUpOutput {
     }
 
     func goToSignUpController() {
-//        let signUpViewController = SignUpModuleBuilder().build(output: self)
-//        navigationController.setViewControllers([signUpViewController], animated: true)
+        let signUpViewController = SignUpModuleBuilder().build(output: self)
+        window.rootViewController = signUpViewController
+        window.makeKeyAndVisible()
 
     }
 
     func goToLoginController() {
         let signInViewController = LoginModuleBuilder().build(output: self)
-        navigationController.setViewControllers([signInViewController], animated: true)
+        window.rootViewController = signInViewController
+        window.makeKeyAndVisible()
     }
 }
