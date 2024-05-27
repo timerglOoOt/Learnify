@@ -3,12 +3,15 @@ import UIKit
 import Combine
 
 // MARK: - Хайруллин Тимур
-class MainViewModel {
-    private let bookBuilder = BookBuilder()
+class MainViewModel: ObservableObject {
+    private let firebase = FirebaseManager(alertShowable: nil)
     private var cancellables = Set<AnyCancellable>()
     @Published var books: [Book] = []
+    @Published var isLoading = false
     private var network: NetworkServiceProtocol
     var errorMessage: PassthroughSubject<NetworkError, Never> = .init()
+    private var currentPage: Int = 0
+    private var currentQuery: String = ""
 
     init(books: [Book]? = nil, network: NetworkServiceProtocol? = nil) {
         self.books = books ?? []
@@ -30,7 +33,17 @@ extension MainViewModel {
     }
 
     func getBooksByQuery(query: String) {
-        network.searchBooks(query: query)
+        isLoading = true
+        currentQuery = query.isEmpty ? "Котики" : query
+        currentPage = 0
+        books = []
+        loadMoreBooks()
+    }
+
+    func loadMoreBooks() {
+        isLoading = true
+        network.searchBooks(query: currentQuery, startIndex: currentPage * 10)
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
@@ -38,8 +51,10 @@ extension MainViewModel {
                 case .finished:
                     break
                 }
-            } receiveValue: { [weak self] books in
-                self?.books = books
+                self?.isLoading = false
+            } receiveValue: { [weak self] newBooks in
+                self?.books.append(contentsOf: newBooks)
+                self?.currentPage += 1
             }
             .store(in: &cancellables)
     }
@@ -66,5 +81,19 @@ extension MainViewModel {
 
     func getBooksAsync() async -> [Book] {
         return books
+    }
+}
+
+extension MainViewModel {
+    func addBookToFirebase(userId: String, bookId: String) {
+        Task {
+            await firebase.addBook(toUserId: userId, bookId: bookId)
+        }
+    }
+
+    func deleteBookFromFirebase(userId: String, bookId: String) {
+        Task {
+            await firebase.removeBook(fromUserId: userId, bookId: bookId)
+        }
     }
 }

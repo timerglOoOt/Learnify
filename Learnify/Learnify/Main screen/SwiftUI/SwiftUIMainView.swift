@@ -11,31 +11,21 @@ import SwiftUI
 
 struct SwiftUIMainView: View {
     @State private var searchText = ""
-    @State private var isLoading = false
-    @State private var books: [Book] = []
-    @State private var allBooksLoaded = true
+    @ObservedObject var viewModel = MainViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 SearchBar(text: $searchText)
-//                    .padding(.horizontal)
-                List {
-                    ForEach(books.filter { searchText.isEmpty || $0.title.localizedCaseInsensitiveContains(searchText) }) { book in
-                        BookCellView(book: book)
-                            .background(
-                                GeometryReader { geo -> Color in
-                                    let maxY = geo.frame(in: .global).maxY
-                                    if maxY < UIScreen.main.bounds.height && self.books.last == book {
-                                        self.loadMoreBooks()
-                                    }
-                                    return Color.clear
-                                }
-                            )
-                            .listRowBackground(Color.white)
-                    }
-
-                    if isLoading {
+                    .padding(.horizontal)
+                List(viewModel.books) { book in
+                    BookCellView(book: book)
+                        .onAppear {
+                            if book == viewModel.books.last {
+                                viewModel.loadMoreBooks()
+                            }
+                        }
+                    if viewModel.isLoading {
                         HStack {
                             Spacer()
                             ProgressView()
@@ -43,39 +33,22 @@ struct SwiftUIMainView: View {
                         }
                     }
                 }
-                .padding(.bottom, 40)
                 .listStyle(PlainListStyle())
-                .onAppear {
-                    loadMoreBooks()
+                .onReceive(viewModel.errorMessage) { errorMessage in
+                    let alert = UIAlertController(title: "Error", message: errorMessage.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
                 }
             }
             .navigationTitle("Books")
-        }
-    }
-
-    private func loadMoreBooks() {
-        guard !isLoading && allBooksLoaded else { return }
-        isLoading = true
-        allBooksLoaded = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            books.append(contentsOf: [
-                BookBuilder()
-                    .addId(id: "\(Int.random(in: 1..<100000))")
-                    .addImage(bookImage: UIImage(named: "book1") ?? UIImage())
-                    .addAuthors(authors: ["Test4"])
-                    .addTitle(title: "Title4")
-                    .addDescription(description: "TestTitle4")
-                    .build(),
-                BookBuilder()
-                    .addId(id: "\(Int.random(in: 1..<100000))")
-                    .addImage(bookImage: UIImage(named: "book2") ?? UIImage())
-                    .addAuthors(authors: ["Test5"])
-                    .addTitle(title: "Title5")
-                    .addDescription(description: "TestTitle5")
-                    .build()
-            ])
-            isLoading = false
-            allBooksLoaded = true
+            .onAppear {
+                viewModel.getBooksByQuery(query: "")
+            }
+            .onChange(of: searchText) { newSearchText in
+                viewModel.getBooksByQuery(query: newSearchText)
+            }
+            .padding(.bottom, 40)
+            .environmentObject(viewModel)
         }
     }
 }
@@ -110,26 +83,52 @@ struct SearchBar: View {
 
 struct BookDetailView: View {
     let book: Book
+    @State private var bookMark: Bool = false
+    @EnvironmentObject var viewModel: MainViewModel
 
     var body: some View {
-        VStack {
-            Text(book.title)
-                .font(.title)
+        ZStack(alignment: .topTrailing) {
+            VStack(alignment: .leading) {
+                Text(book.title)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 20)
 
-            Text(book.description ?? "")
-                .font(.body)
-                .padding()
+                Text(book.description ?? "")
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .padding(.horizontal)
 
-            Spacer()
+                Spacer()
+            }
+
+            Button(action: {
+                bookMark.toggle()
+                guard let userId = UserDefaults.standard.string(forKey: "curUser") else { return }
+                let bookId = book.id
+                if bookMark {
+                    viewModel.addBookToFirebase(
+                        userId: userId, bookId: bookId)
+                } else {
+                    viewModel.deleteBookFromFirebase(userId: userId, bookId: bookId)
+                }
+            }) {
+                Image(systemName: bookMark ? "bookmark.fill" : "bookmark")
+                    .resizable()
+                    .frame(width: 25, height: 40)
+                    .padding()
+                    .foregroundColor(.blue)
+            }
+            .padding(.top, 16)
+            .padding(.trailing, 16)
         }
-        .navigationTitle(book.title)
     }
 }
 
 struct BookCellView: View {
     let book: Book
     @State private var bookMark: Bool = false
-
     var body: some View {
         HStack {
             if let bookImage = book.bookImage {
@@ -142,10 +141,12 @@ struct BookCellView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(book.title)
                     .font(.headline)
+                    .lineLimit(2)
 
                 Text(book.authors?.arrayToString() ?? "")
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                    .lineLimit(1)
 
                 Text(book.description ?? "")
                     .font(.body)
@@ -153,14 +154,11 @@ struct BookCellView: View {
                     .foregroundColor(.gray)
             }
             Spacer()
-            Button(action: {
-                bookMark.toggle()
-            }) {
-                Image(systemName: bookMark ? "bookmark.fill" : "bookmark")
-                    .foregroundColor(.blue)
-            }
         }
         .padding(10)
-        .background(Color.white)
+        .background(
+            NavigationLink("", destination: BookDetailView(book: book))
+                .opacity(0)
+        )
     }
 }
