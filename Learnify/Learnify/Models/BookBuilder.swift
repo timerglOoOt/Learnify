@@ -3,6 +3,7 @@ import UIKit
 
 // MARK: - Хайруллин Тимур (паттерн Builder)
 class BookBuilder {
+    private var id: String?
     private var bookImage: UIImage?
     private var title: String?
     private var authors: [String]?
@@ -15,6 +16,11 @@ class BookBuilder {
     private var averageRating: Double?
     private var ratingsCount: Int?
     private var isSaved: Bool?
+
+    func addId(id: String) -> Self {
+        self.id = id
+        return self
+    }
 
     func addImage(bookImage: UIImage) -> Self {
         self.bookImage = bookImage
@@ -80,6 +86,7 @@ class BookBuilder {
 extension BookBuilder {
     func build() -> Book {
     let book = Book(
+        id: id ?? "",
         bookImage: bookImage,
         title: title ?? "",
         authors: authors,
@@ -99,6 +106,7 @@ extension BookBuilder {
     }
 
     func clearBuild() {
+        id = nil
         bookImage = nil
         title = nil
         authors = nil

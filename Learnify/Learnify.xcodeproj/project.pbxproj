@@ -40,6 +40,9 @@
 		CEA634FD2BAB61D300575962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FC2BAB61D300575962 /* Assets.xcassets */; };
 		CEA635002BAB61D300575962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA634FE2BAB61D300575962 /* LaunchScreen.storyboard */; };
 		CEA6350B2BAB69B000575962 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA6350A2BAB69B000575962 /* SnapKit */; };
+		CEB12DCF2C03B4970067A5E1 /* UICustomSwitchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DCE2C03B4970067A5E1 /* UICustomSwitchLabel.swift */; };
+		CEB12DD12C03B5FA0067A5E1 /* SwiftUICustomSwitchLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DD02C03B5FA0067A5E1 /* SwiftUICustomSwitchLabel.swift */; };
+		CEB12DD52C03B6FD0067A5E1 /* SwiftUIMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB12DD42C03B6FD0067A5E1 /* SwiftUIMainView.swift */; };
 		CEB5F0062BC1598200A94B47 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0052BC1598200A94B47 /* NetworkService.swift */; };
 		CEB5F0082BC15C2C00A94B47 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */; };
 		CEB5F00A2BC15D9300A94B47 /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5F0092BC15D9300A94B47 /* BookParser.swift */; };
@@ -126,6 +129,9 @@
 		CEA634FC2BAB61D300575962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA634FF2BAB61D300575962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA635012BAB61D300575962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB12DCE2C03B4970067A5E1 /* UICustomSwitchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomSwitchLabel.swift; sourceTree = "<group>"; };
+		CEB12DD02C03B5FA0067A5E1 /* SwiftUICustomSwitchLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICustomSwitchLabel.swift; sourceTree = "<group>"; };
+		CEB12DD42C03B6FD0067A5E1 /* SwiftUIMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMainView.swift; sourceTree = "<group>"; };
 		CEB5F0052BC1598200A94B47 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CEB5F0072BC15C2C00A94B47 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		CEB5F0092BC15D9300A94B47 /* BookParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
@@ -253,20 +259,12 @@
 		CE7371752BB05DA700EFD0D1 /* Main screen */ = {
 			isa = PBXGroup;
 			children = (
-				CE7371762BB05DC600EFD0D1 /* Views */,
+				CEB12DD32C03B6E50067A5E1 /* SwiftUI */,
+				CEB12DD22C03B6C20067A5E1 /* UIKit */,
+				CE7371772BB05DD700EFD0D1 /* MainViewController.swift */,
 				CE7371802BB0746C00EFD0D1 /* MainViewModel.swift */,
 			);
 			path = "Main screen";
-			sourceTree = "<group>";
-		};
-		CE7371762BB05DC600EFD0D1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CE7371772BB05DD700EFD0D1 /* MainViewController.swift */,
-				CE7371792BB05DE500EFD0D1 /* MainView.swift */,
-				CE73717B2BB05DF800EFD0D1 /* MainTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CE73717D2BB0647B00EFD0D1 /* Models */ = {
@@ -344,6 +342,23 @@
 			path = AppLife;
 			sourceTree = "<group>";
 		};
+		CEB12DD22C03B6C20067A5E1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CE7371792BB05DE500EFD0D1 /* MainView.swift */,
+				CE73717B2BB05DF800EFD0D1 /* MainTableViewCell.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CEB12DD32C03B6E50067A5E1 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				CEB12DD42C03B6FD0067A5E1 /* SwiftUIMainView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		CEC83E462C0357AC00F16C00 /* Module Builders */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +386,7 @@
 				CEC83E602C0396D000F16C00 /* SWiftUIBlurLoaderView.swift */,
 				CEC83E622C0396F800F16C00 /* UIView+Loader.swift */,
 				CEC83E662C039AD200F16C00 /* SwiftUICustomTextField.swift */,
+				CEB12DD02C03B5FA0067A5E1 /* SwiftUICustomSwitchLabel.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -380,6 +396,7 @@
 			children = (
 				CEC83E642C0397C800F16C00 /* UIViewController+Alert.swift */,
 				CEC83E692C039C2100F16C00 /* UICustomTextField.swift */,
+				CEB12DCE2C03B4970067A5E1 /* UICustomSwitchLabel.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -622,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7371782BB05DD700EFD0D1 /* MainViewController.swift in Sources */,
+				CEB12DCF2C03B4970067A5E1 /* UICustomSwitchLabel.swift in Sources */,
 				CE7371882BB13FC100EFD0D1 /* NetworkError.swift in Sources */,
 				DEE914702C03B6AC007ECB4A /* RegistrationModel.swift in Sources */,
 				CE73717C2BB05DF800EFD0D1 /* MainTableViewCell.swift in Sources */,
@@ -630,6 +648,7 @@
 				CE73717A2BB05DE500EFD0D1 /* MainView.swift in Sources */,
 				28EA622A2BB0B9F3003FBA16 /* ProfileViewModel.swift in Sources */,
 				CEC83E672C039AD200F16C00 /* SwiftUICustomTextField.swift in Sources */,
+				CEB12DD12C03B5FA0067A5E1 /* SwiftUICustomSwitchLabel.swift in Sources */,
 				DEE914742C03C963007ECB4A /* SignUpModuleBuilder.swift in Sources */,
 				CEB5F0062BC1598200A94B47 /* NetworkService.swift in Sources */,
 				28EA62282BB0B9DD003FBA16 /* ProfileView.swift in Sources */,
@@ -652,6 +671,7 @@
 				DE699DC92BB06E040007CA72 /* LoginViewController.swift in Sources */,
 				DE699DD02BB099440007CA72 /* AppCoordinator.swift in Sources */,
 				CE73716A2BAF6D6700EFD0D1 /* Dynamic.swift in Sources */,
+				CEB12DD52C03B6FD0067A5E1 /* SwiftUIMainView.swift in Sources */,
 				CE7371862BB13E9800EFD0D1 /* URLSession.swift in Sources */,
 				28EA62262BB0B9AC003FBA16 /* ProfileViewController.swift in Sources */,
 				CEA634F42BAB61D300575962 /* AppDelegate.swift in Sources */,

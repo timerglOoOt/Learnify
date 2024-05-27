@@ -7,8 +7,8 @@ class NetworkService: NetworkServiceProtocol {
     static let shared = NetworkService()
     private init() {}
 
-    func searchBooks(query: String) -> AnyPublisher<[Book], Error> {
-        guard let url = EndPoint(path: query).url else {
+    func searchBooks(query: String, startIndex: Int) -> AnyPublisher<[Book], Error> {
+        guard let url = EndPoint(path: query, startIndex: startIndex).url else {
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
         return URLSession.shared.dataTaskPublisher(for: url)

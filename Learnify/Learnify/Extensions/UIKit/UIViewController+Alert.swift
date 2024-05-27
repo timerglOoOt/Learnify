@@ -18,7 +18,6 @@ extension UIViewController {
     }
 }
 
-
 extension UIViewController: AlertShowable {
     func showCustomAlertAsync(title: String, message: String) async {
         self.showAlert(title: title, message: message)
