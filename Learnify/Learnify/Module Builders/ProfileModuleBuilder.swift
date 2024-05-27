@@ -8,8 +8,9 @@
 import Foundation
 
 class ProfileModuleBuilder {
-    func build() -> ProfileViewController {
+    func build(output: LogoutOutput) -> ProfileViewController {
         let viewModel = ProfileViewModel()
+        viewModel.delegate = output
         let controller = ProfileViewController(viewModel: viewModel)
         return controller
     }
