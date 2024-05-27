@@ -34,7 +34,6 @@ class RegistrationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     private func setUpfunc() {
         setUpAppname()
         setUpFirstName()
@@ -172,7 +171,6 @@ class RegistrationView: UIView {
         }
     }
 }
-
 
 extension RegistrationView: UITextFieldDelegate {
     struct SignUpFormData {

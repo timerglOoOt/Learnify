@@ -72,7 +72,6 @@ class ProfileView: UIView {
 
         surnameLabel.text = "Khasanshina"
 
-
         let stackView = UIStackView(arrangedSubviews: [firstnameLabel, surnameLabel])
         stackView.axis = .horizontal
         stackView.spacing = 5
@@ -196,7 +195,6 @@ class ProfileView: UIView {
 
         infoLabel.snp.makeConstraints { make in
             make.top.equalTo(infoTitleLabel.snp.bottom).offset(8)
-//            make.centerX.equalToSuperview()
             make.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
             make.leading.equalTo(safeAreaLayoutGuide).offset(20)
             make.height.equalTo(42)

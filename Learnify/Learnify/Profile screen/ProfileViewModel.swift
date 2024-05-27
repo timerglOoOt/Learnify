@@ -11,8 +11,6 @@ class ProfileViewModel {
 
     weak var delegate: LogoutOutput?
 
-    //    private var user = User(firstname: "Doosuur", surname: "Faki", email: "doosuur14@gmail.com", password: "12345", commentCount: 2, booksId: [], info: "I am a student of ITIS")
-
     //    @Published var users = [
     //        User(
     //            firstname: "Doosuur",

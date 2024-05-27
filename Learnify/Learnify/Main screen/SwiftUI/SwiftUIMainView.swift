@@ -93,6 +93,7 @@ struct BookDetailView: View {
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding(.top, 20)
+                    .padding(.bottom, 20)
 
                 Text(book.description ?? "")
                     .font(.body)

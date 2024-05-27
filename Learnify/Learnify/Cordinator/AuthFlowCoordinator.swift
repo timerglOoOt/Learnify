@@ -34,7 +34,7 @@ extension AuthFlowCoordinator: StartOutput {
     func goToReg() {
         goToSignUpController()
     }
-    
+
     func goToLogin() {
         goToLoginController()
     }

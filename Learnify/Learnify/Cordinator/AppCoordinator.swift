@@ -11,7 +11,7 @@ class AppCoordinator: Coordinator {
     var flowCoordinator: Coordinator?
 
     init(window: UIWindow) {
-            self.window = window
+        self.window = window
     }
 
     func start() {
@@ -39,7 +39,7 @@ extension AppCoordinator: AuthFlowCoordinatorOutput, MainFlowCoordinatorProtocol
     func logoutFromTabBar() {
 
     }
-    
+
     func mainFlowSignOutUser() {
         showAuthFlow()
     }

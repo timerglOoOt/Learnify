@@ -40,7 +40,6 @@ class ProfileViewController: UIViewController {
         contentView.delegate = self
 
         viewModel.controller = self
-        
         userData()
     }
 

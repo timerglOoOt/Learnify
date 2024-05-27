@@ -57,11 +57,6 @@ extension LoginViewController: LoginViewDelegate {
     }
 
     func didPressLogin() {
-//        guard let email = contentView.emailTextfield.text, let password = contentView.passwordTextfield.text else {
-//            print("Please enter email and password")
-//            return
-//        }
-//        viewModel.login(email, password: password)
         guard let form = contentView.configureSignInForm() else {
             self.showAlert(
                 title: "Error",

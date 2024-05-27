@@ -8,7 +8,6 @@
 import UIKit
 
 class RegistrationViewController: UIViewController, RegisterViewDelegate {
-    
     var regView: RegistrationView?
     private let viewModel: RegistrationModel
 
@@ -20,7 +19,6 @@ class RegistrationViewController: UIViewController, RegisterViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
@@ -40,7 +38,11 @@ class RegistrationViewController: UIViewController, RegisterViewDelegate {
                 message: "You are trying to send an empty field! Please enter the text."
             )
             return }
-        viewModel.registerUser(user: User(firstname: form.firstname ?? "", surname: form.lastname ?? "", email: form.email ?? "", password: form.password ?? "", commentCount: 12, booksId: ["0"]), password: form.password ?? "")
+        viewModel.registerUser(user: User(
+            firstname: form.firstname ?? "", surname: form.lastname ?? "",
+            email: form.email ?? "", password: form.password ?? "",
+            commentCount: 0, booksId: []), password: form.password ?? ""
+        )
     }
 
     func didPresslogin() {

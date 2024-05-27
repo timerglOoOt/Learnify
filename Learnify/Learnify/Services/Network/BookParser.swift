@@ -34,7 +34,6 @@ struct BookParser {
 //                print("Error loading image data:", error.localizedDescription)
 //            }
 //        }
-
         return bookBuilder
             .addId(id: id)
             .addTitle(title: title)
