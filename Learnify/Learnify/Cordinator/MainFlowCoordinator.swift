@@ -27,11 +27,17 @@ class MainFlowCoordinator: Coordinator {
         // TODO: подгружать книжки и инфомацию о пользователе
         let mainViewController = MainModuleBuilder().build()
         mainViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 0)
-        let profileViewController = ProfileModuleBuilder().build()
+        let profileViewController = ProfileModuleBuilder().build(output: self)
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person"), tag: 1)
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [mainViewController, profileViewController]
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
+    }
+}
+
+extension MainFlowCoordinator: LogoutOutput {
+    func logoutUser() {
+        mainFlowCoordinatorProtocol?.mainFlowSignOutUser()
     }
 }

@@ -204,8 +204,8 @@
 		28EA62222BB0B928003FBA16 /* Profile screen */ = {
 			isa = PBXGroup;
 			children = (
-				28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */,
 				28EA62272BB0B9DD003FBA16 /* ProfileView.swift */,
+				28EA62252BB0B9AC003FBA16 /* ProfileViewController.swift */,
 				28EA62292BB0B9F3003FBA16 /* ProfileViewModel.swift */,
 			);
 			path = "Profile screen";

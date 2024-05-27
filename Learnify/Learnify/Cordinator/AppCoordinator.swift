@@ -36,6 +36,10 @@ private extension AppCoordinator {
 }
 
 extension AppCoordinator: AuthFlowCoordinatorOutput, MainFlowCoordinatorProtocol {
+    func logoutFromTabBar() {
+
+    }
+    
     func mainFlowSignOutUser() {
         showAuthFlow()
     }

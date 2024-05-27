@@ -28,12 +28,19 @@ class ProfileViewController: UIViewController {
     override func loadView() {
         view = contentView
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.getCurrentUser()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 
         delegate = contentView
+
+        contentView.delegate = self
+
+        viewModel.controller = self
+        
         userData()
     }
 
@@ -48,14 +55,21 @@ class ProfileViewController: UIViewController {
 //        }
 //    }
     func userData() {
-        cancellable = viewModel.$users
-            .sink { users in
-            self.delegate?.dataUpdater(
-                firstname: users[0].firstname,
-                surname: users[0].surname,
-                commentCount: users[0].commentCount,
-                bookCount: users[0].booksId.count,
-                info: users[0].info ?? "Write something...")
+        cancellable = viewModel.$currentUser
+            .sink { user in
+                if let user = user {
+                    self.delegate?.dataUpdater(
+                        firstname: user.firstname,
+                        surname: user.surname,
+                        commentCount: user.commentCount,
+                        bookCount: user.booksId.count,
+                        info: user.info ?? "...")
+                }
         }
+    }
+}
+extension ProfileViewController: ProfileViewDelegate {
+    func signOutImageDidPressed() {
+        viewModel.logOutUser()
     }
 }
