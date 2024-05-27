@@ -103,11 +103,11 @@ class RegistrationView: UIView {
     private func setupPassword() {
         addSubview(passwordTextfield)
         passwordTextfield.placeholder = "Password"
-        passwordTextfield.accessibilityIdentifier = AccessibilityIdentifiers.passwordTextField
         passwordTextfield.isHidden = false
         passwordTextfield.backgroundColor = .systemGray6
         passwordTextfield.borderStyle = .roundedRect
         passwordTextfield.textContentType = .password
+        passwordTextfield.isSecureTextEntry = true
         passwordTextfield.textColor = UIColor(named: "SubtitleColor")
         passwordTextfield.snp.makeConstraints { make in
             make.top.equalTo(emailTextfield.snp.bottom).offset(20)

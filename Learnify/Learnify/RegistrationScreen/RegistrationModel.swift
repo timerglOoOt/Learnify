@@ -12,7 +12,7 @@ class RegistrationModel {
     weak var controller: LoginViewController?
     private lazy var firebase = FirebaseManager(alertShowable: controller)
 
-    func registerUser(user: User ,  password: String) {
+    func registerUser(user: User,  password: String) {
         controller?.view.showBlurLoader()
         Task {
             let regUser = await firebase.createUser(user: user, password: password)

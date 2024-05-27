@@ -109,6 +109,7 @@ class LoginView: UIView {
         passwordTextfield.placeholder = "Password"
         passwordTextfield.accessibilityIdentifier = AccessibilityIdentifiers.passwordTextField
         passwordTextfield.isHidden = false
+        passwordTextfield.isSecureTextEntry = true
         passwordTextfield.backgroundColor = .systemGray6
         passwordTextfield.borderStyle = .roundedRect
         passwordTextfield.textContentType = .password
