@@ -3,7 +3,8 @@ import UIKit
 
 // MARK: - Хайруллин Тимур
 
-struct Book: Equatable {
+struct Book: Equatable, Identifiable {
+    let id: String
     let bookImage: UIImage?
     let title: String
     let authors: [String]?

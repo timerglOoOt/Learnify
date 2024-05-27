@@ -105,7 +105,7 @@ class FirebaseManager {
         }
     }
 
-    func removeCard(fromUserId userId: String, bookId: String) async {
+    func removeBook(fromUserId userId: String, bookId: String) async {
         let bookData: [String: String] = ["id": bookId]
 
         do {
